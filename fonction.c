@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <bool.h>
+
 void creer_plateau(){
     int i=0,j=0;
     for(i;i<6;i++){
