@@ -10,13 +10,6 @@ typedef struct{
 }Joueurs;
 
 typedef struct{
-    int mage;
-    int guerrier; 
-    int ranger;
-    int voleur;
-}Personnage_dispo;
-
-typedef struct{
     bool cache; // (1)== cache , (0)== visible
     char monstre; // 0 pas de monstre , 1,2,3,4 monstre associé
     char relique; // 0 pas relique , 1,2,3,4 relique associé
