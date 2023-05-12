@@ -41,7 +41,7 @@ void creer_plateau(case plateau[7][7]){
    }
    x=1 + rand()%6;
    y=1 + rand()%6;
-   for(j=1 ; j<5,j++){
+   for(i=1 ; i<5,j++){
        x=1 + rand()%6;
        y=1 + rand()%6;
        while(case_interdite(plateau[x][y]){ 
@@ -59,7 +59,7 @@ void creer_plateau(case plateau[7][7]){
    plateau[x][y].portail=1
    x=1 + rand()%6;
    y=1 + rand()%6;
-   for(j=1 ; j<5,j++){
+   for(i=1 ; i<3,j++){
        x=1 + rand()%6;
        y=1 + rand()%6;
        while(case_interdite(plateau[x][y]){ 
