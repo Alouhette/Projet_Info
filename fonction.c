@@ -9,6 +9,47 @@ int case_interdite(case plateau[7][7], int x, int y ){
     return 1;   
 }
 
+void deplacement(case plateau[7][7], int *x, int *y){
+    int destination, xt,yt;
+    printf("Maintenant veuillez choisir une destination : \n");
+    printf("            Haut           /n");
+    printf("            [8]            /n");
+    printf(" Gauche [4]     [6] Droite /n");
+    printf("            [2]            /n");
+    printf("            Bas            /n");
+    scanf("%d",&destination);
+    if(destination=2){
+        xt=(*x)-1;
+    }
+    if(destination=4){
+        yt=(*y)-1;
+    }
+    if(destination=6){
+        yt=(*y)+1;
+    }
+    if(destination=8){
+        xt=(*x)+1;
+    }
+    while((xt==0 || yt == 0 || xt==6 || yt==6)){
+        printf("Destination impossible, veuillez choisir une autre destination : \n");
+        scanf("%d",&destination);
+        if(destination=2){
+            xt=(*x)-1;
+        }
+        if(destination=4){
+            yt=(*y)-1;
+        }
+        if(destination=6){
+            yt=(*y)+1;
+        }
+        if(destination=8){
+            xt=(*x)+1;
+        }
+    }
+    *x= xt;
+    *y= yt;
+}
+
 void creer_plateau(case plateau[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
