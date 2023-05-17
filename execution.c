@@ -1,4 +1,4 @@
-/.
+/*
 int lancer_jeu(){
   int j = choix_nbr_j();
   for(int i=0;i<j;i++){
@@ -23,9 +23,9 @@ int jeu(int nb_j){
     }
   }
 }
-./
+*/
 
 int main{
-  lancer_jeu();
+  //lancer_jeu();
   return 0;
 }
