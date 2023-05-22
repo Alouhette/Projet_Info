@@ -22,14 +22,15 @@ int lancer_jeu(){
     printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
     scanf(%d,&player);
   }
+  Joueur *tab;
+  tab = malloc(player*sizeof(Joueur));
   for(int i=0;i<player;i++){
-      choix_perso();
+      tab[i] = creer_joueurs();
   }
-  int v = jeu(j);
-  return v;
+  jeu(player,tab[i]);
 }
 
-int jeu(int nb_j,Joueurs tab_j){
+int jeu(int nb_j,Joueur tab_j){
   int vainqueur=0;
   while(vainqueur == 0){
     for(int i=0;i<nb_j;i++){
