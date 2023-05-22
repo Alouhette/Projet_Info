@@ -61,7 +61,7 @@ int jeu(int nb_j,Joueur tab_j){
         }
         effet_case();    //effet de la case de destination
         victoire();      //test condition victoire
-        case_adjacent(); //verif si le joueur peut bouger        
+        bloquer = case_adjacent(); //verif si le joueur peut bouger        
       }
     
   }
