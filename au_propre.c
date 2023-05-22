@@ -184,25 +184,9 @@ Joueur creer_joueurs(personnage_dispo[4]){
 
 
 
-/*typedef struct{
-    char perso; //perso choisi
-    int relique; //1 si relique obtenu, 0 sinon
-    char arme; //Arme equipée pour ce tour
-    int indice_x; 
-    int indice_y;
-    char nom[100];
-}Joueur;
-typedef struct{
-    bool cache; //Si la case est cachée (1) ou non (0)
-    char monstre;// Quel monstre. 0 = aucun, 1,2,3,4 = monstre spécifique
-    char relique; // Quelle arme. 0 = aucun, 1,2,3,4 = arme spécifique
-    bool tresor; // Si la case possède un trésor (1) ou non(0)
-    bool portail;
-    bool totem_transmu;
-}Case;*/
 
-0 = mort
-int combat_monstre(Joueur persos, Case case_dessus){
+
+int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
     switch(case_dessus.monstre){
         case '1':
             if (persos.arme != 1){
@@ -241,9 +225,34 @@ int combat_monstre(Joueur persos, Case case_dessus){
     }
 }
 
+/*typedef struct{
+    char perso; //perso choisi
+    int relique; //1 si relique obtenu, 0 sinon
+    char arme; //Arme equipée pour ce tour
+    int indice_x; 
+    int indice_y;
+    char nom[100];
+}Joueur;
+typedef struct{
+    bool cache; //Si la case est cachée (1) ou non (0)
+    char monstre;// Quel monstre. 0 = aucun, 1,2,3,4 = monstre spécifique
+    char relique; // Quelle arme. 0 = aucun, 1,2,3,4 = arme spécifique
+    bool tresor; // Si la case possède un trésor (1) ou non(0)
+    bool portail;
+    bool totem_transmu;
+}Case;*/
 
-int portail(){
-    l
+void portail(Joueur persos){
+    int x;
+    int y;
+    
+    printf("Sur quelle ligne souhaite-vous vous rendre : ");
+    scanf(%d,&x); //verif
+    printf("Sur quelle colonne souhaite-vous vous rendre : ");
+    scanf(%d,&y); //verif
+    
+    persos.indice_x = x;
+    persos.indice_y = y;
 }
 
 
