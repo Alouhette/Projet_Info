@@ -1,4 +1,4 @@
-/*
+
 int lancer_jeu(){
   int j = choix_nbr_j();
   for(int i=0;i<j;i++){
@@ -16,7 +16,7 @@ int jeu(int nb_j,Joueurs tab_j){
       int bloquer = 0;
       while(en_vie==1 && bloquer = 0){
         destination = 0;
-        choix_arme();    /choix de l'arme
+        tab_j[i].arme = choix_arme();    /choix de l'arme
         destination = deplacement();   /fct de mouvement du joueurs
         if(destination==2){
           xt=(*x)-1;
@@ -44,7 +44,6 @@ int jeu(int nb_j,Joueurs tab_j){
     
   }
 }
-*/
 
 int main{
   //lancer_jeu();
