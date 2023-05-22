@@ -201,45 +201,44 @@ typedef struct{
     bool totem_transmu;
 }Case;*/
 
-
+0 = mort
 int combat_monstre(Joueur persos, Case case_dessus){
     switch(case_dessus.monstre){
         case '1':
-            if (persos.arme != X){
-                Tuer joueur
+            if (persos.arme != 1){
+                return 0;
             }
             else{
-                Tuer monstre
+                return 1;
             }
             break;
         case '2':
-            if (persos.arme != X){
-                Tuer joueur
+            if (persos.arme != 2){
+                return 0;
             }
             else{
-                Tuer monstre
+                return 1;
             }
             break;
         case '3':
-            if (persos.arme != X){
-                Tuer joueur
+            if (persos.arme != 3){
+                return 0;
             }
             else{
-                Tuer monstre
+                return 1;
             }
             break;
         case '4':
-            if (persos.arme != X){
-                Tuer joueur
+            if (persos.arme != 4){
+                return 0;
             }
             else{
-                Tuer monstre
+                return 1;
             }
             break;
         default :
-            A
+            exit(1);
     }
-
 }
 
 
