@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include "donnee.c"
+#include "fonction.c"
 
 int lancer_jeu(){
   int j = choix_nbr_j();
