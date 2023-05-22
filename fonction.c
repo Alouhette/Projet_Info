@@ -38,7 +38,7 @@ int choix_arme(Joueurs j){
 
 int victoire(Joueurs j,int num_j){
     if(j.tresor == 1 && j.relique == 1){
-        return num_j;
+        return num_j+1;
     }
     else{
         return 0;
