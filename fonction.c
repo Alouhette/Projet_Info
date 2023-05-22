@@ -46,6 +46,8 @@ int victoire(Joueurs j,int num_j){
         
 }
 
+
+
 void creer_plateau(case plateau[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
