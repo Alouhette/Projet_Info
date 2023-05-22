@@ -22,10 +22,29 @@ int deplacement(){
 }
 
 Joueur choix_arme(Joueurs j){
-   char arme[10];
-   printf("veuillez choisir l'objet que vous utiliser ce tour ci parmis les objets suivant :\n");
-   printf(" -
-   Scanf(%s,
+   int arme;
+   printf("veuillez choisir une arme (numéro):\n");
+   printf("1 - La Torche\n");
+   printf("2 - Le Bouclier\n");
+   printf("3 - La Hache\n");
+   printf("4 - L'Arc\n");
+   scanf(%d,&arme);
+   if(){
+        j.arme = 1;
+   } 
+   else if(arme == Bouclier || arme == "2" || arme == bouclier){
+        j.arme = 2;
+   } 
+   else if(arme == Hache || arme == "3" || arme == hache){
+        j.arme = 3;
+   } 
+   else if(arme == Arc || arme == "4" || arme ==arc){
+        j.arme = 4;
+   }
+   else{
+     printf("Erreur lors de la séléction d'arme !");
+     choix_arme(j);
+   }
 }
 
 void creer_plateau(case plateau[7][7]){
