@@ -7,6 +7,9 @@ void affiche_titre(){
   printf(" / /  / / /_/ (__  ) /_/  __/ /  / / /_/ / \n");
   printf("/_/  /_/\__, /____/\__/\___/_/  /_/\__,_/  \n");
   printf("       /____/                              \n");
+  printf("Press 1 to start in normal mode\n");
+  printf("Press 2 to start in troll mode\n");
+  printf("Press 3 to exit\n");
 }
 
 int lancer_jeu(){
@@ -56,6 +59,23 @@ int jeu(int nb_j,Joueurs tab_j){
 }
 
 int main{
-  //lancer_jeu();
+  affiche_titre();
+  int choix;
+  scanf("%d",&choix);
+  //faire la verif scanf
+  if(choix == 1){
+    //musique
+    lancer_jeu();
+  }
+  else if(choix == 2){
+    //musique 2
+    lancer_jeu();
+  }
+  else if(choix == 3){
+    //a faire
+  }
+  else{
+    
+  }
   return 0;
 }
