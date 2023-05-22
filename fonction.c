@@ -21,7 +21,7 @@ int deplacement(){
     return destination;
 }
 
-Joueur choix_arme(Joueurs j){
+int choix_arme(Joueurs j){
    int arme;
    printf("veuillez choisir une arme (numéro):\n");
    printf("1 - La Torche\n");
