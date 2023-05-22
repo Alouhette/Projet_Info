@@ -1,5 +1,14 @@
 #include "fonction.c"
 
+void affiche_titre(){
+  printf("    __  ___           __            _      \n");
+  printf("   /  |/  /_  _______/ /____  _____(_)___ _\n");
+  printf("  / /|_/ / / / / ___/ __/ _ \/ ___/ / __ `/\n");
+  printf(" / /  / / /_/ (__  ) /_/  __/ /  / / /_/ / \n");
+  printf("/_/  /_/\__, /____/\__/\___/_/  /_/\__,_/  \n");
+  printf("       /____/                              \n");
+}
+
 int lancer_jeu(){
   int j = choix_nbr_j();
   for(int i=0;i<j;i++){
