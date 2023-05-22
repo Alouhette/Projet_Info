@@ -63,6 +63,10 @@ int main{
   int choix;
   scanf("%d",&choix);
   //faire la verif scanf
+  while(choix<1 && choix>3){
+    printf("valeur rentré incorrect veuillez resaisir");
+    //faire la verif scanf
+  }
   if(choix == 1){
     //musique
     lancer_jeu();
@@ -72,10 +76,8 @@ int main{
     lancer_jeu();
   }
   else if(choix == 3){
-    //a faire
+    printf("you decided to leave");
   }
-  else{
-    
-  }
+  printf("merci d'avoir joué");
   return 0;
 }
