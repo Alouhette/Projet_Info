@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <bool.h>
-
+#include "execution.h"
+#include "donnee.h"
 
 int case_interdite(case plateau[7][7], int x, int y ){ 
     if(plateau [x][y].tresor !=0 &&  plateau [x][y].monstre!=0 && plateau [x][y].relique!=0){
@@ -9,16 +10,22 @@ int case_interdite(case plateau[7][7], int x, int y ){
     return 1;   
 }
 
-int deplacement(case plateau[7][7]){
-    int destination, xt,yt;
+int deplacement(){
     printf("Maintenant veuillez choisir une destination : \n");
-    printf("            Haut           /n");
-    printf("            [8]            /n");
-    printf(" Gauche [4]     [6] Droite /n");
-    printf("            [2]            /n");
-    printf("            Bas            /n");
+    printf("            Haut           \n");
+    printf("            [8]            \n");
+    printf(" Gauche [4]     [6] Droite \n");
+    printf("            [2]            \n");
+    printf("            Bas            \n");
     scanf("%d",&destination);
     return destination;
+}
+
+Joueur choix_arme(Joueurs j){
+   char arme[10];
+   printf("veuillez choisir l'objet que vous utiliser ce tour ci parmis les objets suivant :\n");
+   printf(" -
+   Scanf(%s,
 }
 
 void creer_plateau(case plateau[7][7]){
