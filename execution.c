@@ -36,7 +36,7 @@ int jeu(int nb_j,Joueur tab_j){
     for(int i=0;i<nb_j;i++){
       int en_vie = 1;
       int bloquer = 0;
-      while(en_vie==1 && bloquer = 0){
+      while((en_vie==1 && bloquer = 0)&&(vainqueur == 0)){
         destination = 0;
         tab_j[i].arme = choix_arme(tab_j[i]);  //choix de l'arme
         destination = deplacement();   //fct de mouvement du joueur
