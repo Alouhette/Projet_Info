@@ -18,6 +18,10 @@ int lancer_jeu(){
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
   printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
   scanf(%d,&player);
+  while(player < 1 && player > 4){
+    printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
+    scanf(%d,&player);
+  }
   for(int i=0;i<player;i++){
       choix_perso();
   }
