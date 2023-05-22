@@ -36,6 +36,16 @@ int choix_arme(Joueurs j){
    }
 }
 
+int victoire(Joueurs j,int num_j){
+    if(j.tresor == 1 && j.relique == 1){
+        return num_j;
+    }
+    else{
+        return 0;
+    }
+        
+}
+
 void creer_plateau(case plateau[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
