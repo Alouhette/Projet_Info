@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <bool.h>
-#include "execution.h"
-#include "donnee.h"
+#include "donnee.c"
 
 int case_interdite(case plateau[7][7], int x, int y ){ 
     if(plateau [x][y].tresor !=0 &&  plateau [x][y].monstre!=0 && plateau [x][y].relique!=0){
