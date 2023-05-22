@@ -6,8 +6,8 @@ typedef struct{
     char monstre;// Quel monstre. 0 = aucun, 1,2,3,4 = monstre spécifique
     char relique; // Quelle arme. 0 = aucun, 1,2,3,4 = arme spécifique
     bool tresor; // Si la case possède un trésor (1) ou non(0)
-    bool portail
-    bool totem_transmu
+    bool portail;
+    bool totem_transmu;
 }Case;
 
 
@@ -85,12 +85,6 @@ void afficher_plateau(Case plateau[7][7]){
     }
     printf("\n");
 }
-
-
-
-
-
-
 
 
 void afficher_dispo(Personnage_dispo *perso){
@@ -180,7 +174,30 @@ Joueur creer_joueurs(personnage_dispo[4]){
             }
             break;
         default :
-            printf("Nom de personnage incorrect veuillez réessayer.\n");
+            printf("Saisie incorrecte, réessayez.\n");
             return creer_joueurs(personnage_dispo[]);
     }
+}
+
+
+
+
+int combat_monstre(){
+    l
+}
+
+int get_relique(){
+    l
+}
+
+int get_tresor(){
+    l
+}
+
+int portail(){
+    l
+}
+
+int transmutation(){
+    l
 }
