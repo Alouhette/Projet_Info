@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <bool.h>
 #include "donnee.c"
 
 int case_interdite(case plateau[7][7], int x, int y ){ 
