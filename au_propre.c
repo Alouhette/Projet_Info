@@ -182,22 +182,107 @@ Joueur creer_joueurs(personnage_dispo[4]){
 
 
 
-int combat_monstre(){
-    l
+
+
+/*typedef struct{
+    char perso; //perso choisi
+    int relique; //1 si relique obtenu, 0 sinon
+    char arme; //Arme equipée pour ce tour
+    int indice_x; 
+    int indice_y;
+    char nom[100];
+}Joueur;
+typedef struct{
+    bool cache; //Si la case est cachée (1) ou non (0)
+    char monstre;// Quel monstre. 0 = aucun, 1,2,3,4 = monstre spécifique
+    char relique; // Quelle arme. 0 = aucun, 1,2,3,4 = arme spécifique
+    bool tresor; // Si la case possède un trésor (1) ou non(0)
+    bool portail;
+    bool totem_transmu;
+}Case;*/
+
+
+int combat_monstre(Joueur persos, Case case_dessus){
+    if persos.arme(diff du monstre){
+        le tuer
+    }
+    else{
+        ne rien faire
+    }
 }
 
-int get_relique(){
-    l
-}
-
-int get_tresor(){
-    l
-}
 
 int portail(){
     l
 }
 
+
 int transmutation(){
     l
 }
+
+switch(choix_perso){
+        case '1':
+            if (personnage_dispo[0] == 0){
+                printf("Personnage non disponible, veuillez en choisir un autre.\n");
+                return creer_joueurs(personnage_dispo[]);
+            }
+            else{
+                personnage_dispo[0] = 0;
+                personne.perso = 'm';
+                personne.relique = 0;
+                personne.arme = '?';
+                personne.indice_x = 0;
+                personne.indice_y = 2;
+                return personne;
+            }
+            break;
+        case '2':
+            if (personnage_dispo[1] == 0){
+                printf("Personnage non disponible, veuillez en choisir un autre.\n");
+                return creer_joueurs(personnage_dispo[]);
+            }
+            else{
+                personnage_dispo[1] = 0;
+                personne.perso = 'g';
+                personne.relique = 0;
+                personne.arme = '?';
+                personne.indice_x = 2;
+                personne.indice_y = 6;
+                return personne;
+            }
+            break;
+        case '3':
+            if (personnage_dispo[2] == 0){
+                printf("Personnage non disponible, veuillez en choisir un autre.\n");
+                return creer_joueurs(personnage_dispo[]);
+            }
+            else{
+                personnage_dispo[2] = 0;
+                personne.perso = 'r';
+                personne.relique = 0;
+                personne.arme = '?';
+                personne.indice_x = 4;
+                personne.indice_y = 0;
+                return personne;
+            }
+            break;
+        case '4':
+            if (personnage_dispo[3] == 0){
+                printf("Personnage non disponible, veuillez en choisir un autre.\n");
+                return creer_joueurs(personnage_dispo[]);
+            }
+            else{
+                personnage_dispo[3] = 0;
+                personne.perso = 'v';
+                personne.relique = 0;
+                personne.arme = '?';
+                personne.indice_x = 6;
+                personne.indice_y = 4;
+                return personne;
+            }
+            break;
+        default :
+            printf("Saisie incorrecte, réessayez.\n");
+            return creer_joueurs(personnage_dispo[]);
+    }
