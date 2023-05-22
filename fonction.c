@@ -48,6 +48,7 @@ int victoire(Joueurs j,int num_j){
 
 int case_adjacente(case plateau[7][7],int x,int y){
     if((plateau[x+1][y].caché == 1) && (plateau[x-1][y].caché == 1) && (plateau[x][y+1].caché == 1) && (plateau[x][y-1].caché == 1)){
+        printf("toutes les cases adjacentes sont révélés vous ne pouvez plus vous déplacer, passage au joueur suivant");
         return 1;
     }
     else{
