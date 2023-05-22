@@ -22,8 +22,8 @@ int jeu(int nb_j,Joueurs tab_j){
       int bloquer = 0;
       while(en_vie==1 && bloquer = 0){
         destination = 0;
-        tab_j[i].arme = choix_arme();    /choix de l'arme
-        destination = deplacement();   /fct de mouvement du joueurs
+        tab_j[i].arme = choix_arme(tab_j[i]);  //choix de l'arme
+        destination = deplacement();   //fct de mouvement du joueur
         if(destination==2){
           xt=(*x)-1;
           yt = y:
@@ -43,9 +43,9 @@ int jeu(int nb_j,Joueurs tab_j){
         if(xt==0 || yt == 0 || xt==6 || yt==6){
             en_vie = 0
         }
-        effet_case();    /effet de la case de destination
-        victoire();      /test condition victoire
-        case_adjacent(); /verif si le joueur peut bouger        
+        effet_case();    //effet de la case de destination
+        victoire();      //test condition victoire
+        case_adjacent(); //verif si le joueur peut bouger        
       }
     
   }
