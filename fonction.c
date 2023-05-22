@@ -46,7 +46,14 @@ int victoire(Joueurs j,int num_j){
         
 }
 
-
+int case_adjacente(case plateau[7][7],int x,int y){
+    if((plateau[x+1][y].caché == 1) && (plateau[x-1][y].caché == 1) && (plateau[x][y+1].caché == 1) && (plateau[x][y-1].caché == 1)){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
 
 void creer_plateau(case plateau[7][7]){
     int i=0,j=0;
