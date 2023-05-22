@@ -13,8 +13,12 @@ void affiche_titre(){
 }
 
 int lancer_jeu(){
-  int j = choix_nbr_j();
-  for(int i=0;i<j;i++){
+  int player;
+  printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
+  printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
+  printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
+  scanf(%d,&player);
+  for(int i=0;i<player;i++){
       choix_perso();
   }
   int v = jeu(j);
