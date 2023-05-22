@@ -29,21 +29,13 @@ Joueur choix_arme(Joueurs j){
    printf("3 - La Hache\n");
    printf("4 - L'Arc\n");
    scanf(%d,&arme);
-   if(){
-        j.arme = 1;
-   } 
-   else if(arme == Bouclier || arme == "2" || arme == bouclier){
-        j.arme = 2;
-   } 
-   else if(arme == Hache || arme == "3" || arme == hache){
-        j.arme = 3;
-   } 
-   else if(arme == Arc || arme == "4" || arme ==arc){
-        j.arme = 4;
+   if((arme > 0) && (arme <5)){
+       return arme;
    }
    else{
-     printf("Erreur lors de la séléction d'arme !");
-     choix_arme(j);
+       printf("Erreur lors de la séléction d'arme !");
+       arme = choix_arme(j);
+       return arme;
    }
 }
 
