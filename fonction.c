@@ -1,13 +1,13 @@
 #include "donnee.h"
 
-int case_interdite(case plateau[7][7], int x, int y ){ 
-    if(plateau [x][y].tresor !=0 &&  plateau [x][y].monstre!=0 && plateau [x][y].relique!=0){
+int forbidden_space(Space board[7][7], int x, int y ){ 
+    if(board[x][y].treasure !=0 &&  board[x][y].monster!=0 && board[x][y].relic!=0){
         return 0;   
     };
     return 1;   
 }
 
-int deplacement(){
+int movement(){
     printf("Maintenant veuillez choisir une destination : \n");
     printf("            Haut           \n");
     printf("            [8]            \n");
