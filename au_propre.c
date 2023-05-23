@@ -21,6 +21,9 @@ typedef struct{
 }Joueur;
 
 
+//Inclure les vérifications ici//
+
+
 void affiche_symbole(Case x){
     if (x.monstre != 0){
         //Quel monstre sera affiché
