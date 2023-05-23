@@ -35,6 +35,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
+      printf("au tour de %s\n",tab_j[i].nom);
       afficher_plateau(board);
       int alive = 1;
       int blocked = 0;
@@ -75,7 +76,12 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
       }
     }
   }
-  printf("and the winner is player %d",victory);
+  printf("and the winner is player %d\n",victory);
+  for(int j=0;j<6;j++){
+        for(int h=0;h<6;h++){
+          board[j][h].hidden = 0;
+  printf("révélation du plateau\n");
+  affiche_plateau(board);
 }
 
 int main{
