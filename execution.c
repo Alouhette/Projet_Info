@@ -22,24 +22,24 @@ int lancer_jeu(){
     printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
     scanf(%d,&player);
   }
-  Joueur *tab;
-  tab = malloc(player*sizeof(Joueur));
+  Player *tab;
+  tab = malloc(player*sizeof(Player));
   for(int i=0;i<player;i++){
-      tab[i] = creer_joueurs();
+      tab[i] = create_player();
   }
   jeu(player,tab[i]);
 }
 
-int jeu(int nb_j,Joueur tab_j){
-  int vainqueur=0;
-  while(vainqueur == 0){
+int jeu(int nb_j,Player tab_j){
+  int winner=0;
+  while(winner == 0){
     for(int i=0;i<nb_j;i++){
-      int en_vie = 1;
-      int bloquer = 0;
-      while((en_vie==1 && bloquer = 0)&&(vainqueur == 0)){
+      int alive = 1;
+      int blocked = 0;
+      while((alive==1 && blocked = 0)&&(winner == 0)){
         destination = 0;
-        tab_j[i].arme = choix_arme(tab_j[i]);  //choix de l'arme
-        destination = deplacement();   //fct de mouvement du joueur
+        tab_j[i].weapon = weapon_choice(tab_j[i]);  //choix de l'arme
+        destination = movement();   //fct de mouvement du joueur
         if(destination==2){
           xt=(*x)-1;
           yt = y:
@@ -59,9 +59,9 @@ int jeu(int nb_j,Joueur tab_j){
         if(xt==0 || yt == 0 || xt==6 || yt==6){
             en_vie = 0
         }
-        effet_case();    //effet de la case de destination
-        victoire();      //test condition victoire
-        bloquer = case_adjacent(); //verif si le joueur peut bouger        
+        Space_effect();    //effet de la case de destination
+        victory();      //test condition victoire
+        blocked = other_space(); //verif si le joueur peut bouger        
       }
     
   }
