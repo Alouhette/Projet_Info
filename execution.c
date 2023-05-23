@@ -43,6 +43,8 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
+      double time_spent = 0.0; // pour stocker le temps d'exécution du code
+      clock_t begin = clock();
       printf("au tour de %s\n",tab_j[i].nom);
       afficher_plateau(board);
       int alive = 1;
@@ -75,19 +77,23 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         winner = victory(tab_j[i],i);  
         blocked = other_space(board,tab_j[i].indice_x,tab_j[i].indice_y); //verif si le joueur peut bouger        
       }
-      if((alive==0)&&(winner =! 0)){
+      clock_t end = clock(); // calcule le temps écoulé en trouvant la différence (end - begin) et
+                             // divisant la différence par CLOCKS_PER_SEC pour convertir en secondes
+      time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
+      printf("Tle temps écoulé pour le tour est de %f secondes", time_spent);
+      if((alive==0)&&(winner =! 0)){ //verification de si le joueurs à reussi à gagner en étant mort
         winner=0;
       }
-      for(int j=0;j<6;j++){
+      for(int j=0;j<6;j++){ //on recache toutes les cases
         for(int h=0;h<6;h++){
           board[j][h].hidden = 1;
       }
     }
   }
-  printf("and the winner is player %d\n",victory);
+  printf("and the winner is player %d\n",victory); // montrer le gagnant 
   for(int j=0;j<6;j++){
         for(int h=0;h<6;h++){
-          board[j][h].hidden = 0;
+          board[j][h].hidden = 0; //afficher le tableau entier
   printf("révélation du plateau\n");
   affiche_plateau(board);
   return winner;
