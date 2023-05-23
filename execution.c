@@ -1,6 +1,6 @@
 #include "fonction.c"
 
-void affiche_titre(){
+void title(){
   printf("    __  ___           __            _      \n");
   printf("   /  |/  /_  _______/ /____  _____(_)___ _\n");
   printf("  / /|_/ / / / / ___/ __/ _ \/ ___/ / __ `/\n");
@@ -8,11 +8,10 @@ void affiche_titre(){
   printf("/_/  /_/\__, /____/\__/\___/_/  /_/\__,_/  \n");
   printf("       /____/                              \n");
   printf("Press 1 to start in normal mode\n");
-  printf("Press 2 to start in troll mode\n");
-  printf("Press 3 to exit\n");
+  printf("Press 2 to exit\n");
 }
 
-int lancer_jeu(){
+int play_game(){
   int player;
   printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
@@ -27,10 +26,10 @@ int lancer_jeu(){
   for(int i=0;i<player;i++){
       tab[i] = create_player();
   }
-  jeu(player,tab[i]);
+  game(player,tab[i]);
 }
 
-int jeu(int nb_j,Player tab_j){
+int game(int nb_j,Player tab_j){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
@@ -68,25 +67,19 @@ int jeu(int nb_j,Player tab_j){
 }
 
 int main{
-  affiche_titre();
-  int choix;
-  scanf("%d",&choix);
+  title();
+  int choice;
+  scanf("%d",&choice);
   //faire la verif scanf
-  while(choix<1 && choix>3){
+  while(choice<1 && choice>2){
     printf("valeur rentré incorrect veuillez resaisir");
     //faire la verif scanf
   }
-  if(choix == 1){
+  if(choice == 1){
     //musique
-    lancer_jeu();
-  }
-  else if(choix == 2){
-    //musique 2
-    lancer_jeu();
-  }
-  else if(choix == 3){
+    play_game();
+  else if(choice == 2){
     printf("you decided to leave");
   }
-  printf("merci d'avoir joué");
   return 0;
 }
