@@ -29,6 +29,14 @@ int play_game(){
   Space board[7][7];
   create_board(board);
   game(player,tab[i]);
+  printf("voulez vous rejouer ? (1=oui , 0=non) \n");
+  bool choice
+  if(choice){
+    play_game();
+  }
+  else{
+    printf("merci d'avoir joué");
+  }
 }
 
 int game(int nb_j,Player tab_j,Space board[7][7]){
@@ -82,6 +90,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
           board[j][h].hidden = 0;
   printf("révélation du plateau\n");
   affiche_plateau(board);
+  return winner;
 }
 
 int main{
@@ -91,6 +100,7 @@ int main{
   //faire la verif scanf
   while(choice<1 && choice>2){
     printf("valeur rentré incorrect veuillez resaisir");
+    scanf("%d",&choice);
     //faire la verif scanf
   }
   if(choice == 1){
