@@ -4,6 +4,7 @@
 #include <bool.h>
 
 typedef struct{
+    char[30] name;
     char character; //perso choisi
     int relic; //val pour indiquer si il a ou non la relique 0 = non obtenu
     char weapon; //arme equipe pour ce tour
