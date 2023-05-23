@@ -106,6 +106,8 @@ void afficher_dispo(Personnage_dispo *perso){
 
 Joueur creer_joueurs(personnage_dispo[4]){
     Joueur personne;
+    printf("veuillez choisir un nom");
+    scanf("%s",personne.nom);
     char choix_perso;
     printf("Veuillez choisir le personnage que vous voulez jouez parmi les suivants :\n");
     afficher_dispo(*perso);
