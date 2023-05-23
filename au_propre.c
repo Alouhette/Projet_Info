@@ -224,22 +224,6 @@ int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
     }
 }
 
-/*typedef struct{
-    char perso; //perso choisi
-    int relique; //1 si relique obtenu, 0 sinon
-    char arme; //Arme equipée pour ce tour
-    int indice_x; 
-    int indice_y;
-    char nom[100];
-}Joueur;
-typedef struct{
-    bool cache; //Si la case est cachée (1) ou non (0)
-    char monstre;// Quel monstre. 0 = aucun, 1,2,3,4 = monstre spécifique
-    char relique; // Quelle arme. 0 = aucun, 1,2,3,4 = arme spécifique
-    bool tresor; // Si la case possède un trésor (1) ou non(0)
-    bool portail;
-    bool totem_transmu;
-}Case;*/
 
 void portail(Joueur persos){
     int x;
@@ -256,7 +240,9 @@ void portail(Joueur persos){
 
 
 //PAS ENCORE TERMINE !!!!!!!!
-int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE]){
+int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE], int x_init, int y_init){
+    //x_init, y_init = coordonnées initiales du totem (la case sur la quelle le joueur est)
+    
     //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
     int x;
     int y;
@@ -269,7 +255,7 @@ int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE]){
     scanf(%d,&y); //verif à faire
     
     //intervertir la case du totem avec la case choisie par l'utilisateur
-    plateau_de_jeu[x][y] = plateau_de_jeu[][]
-    plateau_de_jeu[][] = plateau_de_jeu[][]
-    plateau_de_jeu[][] = plateau_de_jeu[][]
+    tmp = plateau_de_jeu[x][y]
+    plateau_de_jeu[x][y] = plateau_de_jeu[x_init][y_init]
+    plateau_de_jeu[x_init][y_init] = tmp
 }
