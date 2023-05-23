@@ -29,7 +29,7 @@ int play_game(){
   game(player,tab[i]);
 }
 
-int game(int nb_j,Player tab_j){
+int game(int nb_j,Player tab_j,Space board[7][7]){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
@@ -59,11 +59,19 @@ int game(int nb_j,Player tab_j){
             en_vie = 0
         }
         Space_effect();    //effet de la case de destination
-        victory();      //test condition victoire
-        blocked = other_space(); //verif si le joueur peut bouger        
+        winner = victory(tab_j[i],i);  
+        blocked = other_space(board,tab_j[i].indice_x,tab_j[i].indice_y); //verif si le joueur peut bouger        
       }
-    
+      if((alive==0)&&(winner =! 0)){
+        winner=0;
+      }
+      for(int j=0;j<6;j++){
+        for(int h=0;h<6;h++){
+          tab
+      }
+    }
   }
+  printf("and the winner is player %d",victory);
 }
 
 int main{
