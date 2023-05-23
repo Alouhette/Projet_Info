@@ -18,25 +18,25 @@ int movement(){
     return destination;
 }
 
-int choix_arme(Joueurs j){
-   int arme;
+int weapon_choice(){
+   int weapon;
    printf("veuillez choisir une arme (numéro):\n");
    printf("1 - La Torche\n");
    printf("2 - Le Bouclier\n");
    printf("3 - La Hache\n");
    printf("4 - L'Arc\n");
-   scanf(%d,&arme);
-   if((arme > 0) && (arme <5)){
-       return arme;
+   scanf(%d,&weapon);
+   if((weapon > 0) && (weapon <5)){
+       return weapon;
    }
    else{
        printf("Erreur lors de la séléction d'arme !");
-       arme = choix_arme(j);
-       return arme;
+       weapon = weapon_choice(j);
+       return weapon;
    }
 }
 
-int victoire(Joueurs j,int num_j){
+int victory(Player j,int num_j){
     if(j.tresor == 1 && j.relique == 1){
         return num_j+1;
     }
@@ -46,8 +46,8 @@ int victoire(Joueurs j,int num_j){
         
 }
 
-int case_adjacente(case plateau[7][7],int x,int y){
-    if((plateau[x+1][y].caché == 1) && (plateau[x-1][y].caché == 1) && (plateau[x][y+1].caché == 1) && (plateau[x][y-1].caché == 1)){
+int other_Space(Space board[7][7],int x,int y){
+    if((board[x+1][y].hidden == 1) && (board[x-1][y].hidden == 1) && (board[x][y+1].hidden == 1) && (board[x][y-1].hidden == 1)){
         printf("toutes les cases adjacentes sont révélés vous ne pouvez plus vous déplacer, passage au joueur suivant");
         return 1;
     }
@@ -56,34 +56,34 @@ int case_adjacente(case plateau[7][7],int x,int y){
     }
 }
 
-void creer_plateau(case plateau[7][7]){
+void create_board(Space board[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
         for(j;j<6;j++){
             //creer les elem case (caché et sans monstre tresor et arme)
             case tile;
-            tile.cache = 1;
-            tile.monstre = 0;
-            tile.relique = 0;
-            tile.tresor = 0;
+            tile.hidden = 1;
+            tile.monster = 0;
+            tile.relic = 0;
+            tile.treasure = 0;
             plateau[7][7] = tile;            
         }
     }
    int x, y;    
    x=1 + rand()%6;
    y=1 + rand()%6;
-   while(case_interdite(plateau[x][y]){ 
+   while(forbidden_space(board[x][y]){ 
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
-   plateau[x][y].tresor=1;
+   board[x][y].treasure=1;
    for (i=1; i<5;i++){
         for(j=1 ; j<5,j++){
-            while(case_interdite(plateau[x][y]){ 
+            while(forbidden_space(board[x][y]){ 
                 x=1 + rand()%5;
                 y=1 + rand()%5;
             }
-            plateau[x][y].monstre=i;
+            board[x][y].monster=i;
         }
    }
    x=1 + rand()%6;
@@ -91,19 +91,19 @@ void creer_plateau(case plateau[7][7]){
    for(i=1 ; i<5,j++){
        x=1 + rand()%6;
        y=1 + rand()%6;
-       while(case_interdite(plateau[x][y]){ 
+       while(forbidden_space(board[x][y]){ 
              x=1 + rand()%5;
              y=1 + rand()%5;
        }
-       plateau[x][y].relique=1;
+       board[x][y].relic=1;
    }
    x=1 + rand()%6;
    y=1 + rand()%6;
-   while(case_interdite(plateau[x][y]){ 
+   while(forbidden_space(board[x][y]){ 
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
-   plateau[x][y].portail=1
+   board[x][y].portal=1
    x=1 + rand()%6;
    y=1 + rand()%6;
    for(i=1 ; i<3,j++){
@@ -113,6 +113,6 @@ void creer_plateau(case plateau[7][7]){
              x=1 + rand()%5;
              y=1 + rand()%5;
        }
-       plateau[x][y].totem=1;
+       board[x][y].totem=1;
    }
 }
