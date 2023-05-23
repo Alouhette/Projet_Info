@@ -26,6 +26,8 @@ int play_game(){
   for(int i=0;i<player;i++){
       tab[i] = create_player();
   }
+  Space board[7][7];
+  create_board(board);
   game(player,tab[i]);
 }
 
