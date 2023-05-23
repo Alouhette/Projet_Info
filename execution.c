@@ -35,6 +35,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
+      afficher_plateau(board);
       int alive = 1;
       int blocked = 0;
       while((alive==1 && blocked = 0)&&(winner == 0)){
@@ -60,6 +61,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         if(xt==0 || yt == 0 || xt==6 || yt==6){
             en_vie = 0
         }
+        afficher_plateau(board);
         Space_effect();    //effet de la case de destination
         winner = victory(tab_j[i],i);  
         blocked = other_space(board,tab_j[i].indice_x,tab_j[i].indice_y); //verif si le joueur peut bouger        
