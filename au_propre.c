@@ -182,12 +182,6 @@ Joueur creer_joueurs(personnage_dispo[4]){
 }
 
 
-
-
-
-
-
-
 int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
     switch(case_dessus.monstre){
         case '1':
@@ -249,15 +243,30 @@ void portail(Joueur persos){
     int y;
     
     printf("Sur quelle ligne souhaite-vous vous rendre : ");
-    scanf(%d,&x); //verif
+    scanf(%d,&x); //verif à faire
     printf("Sur quelle colonne souhaite-vous vous rendre : ");
-    scanf(%d,&y); //verif
+    scanf(%d,&y); //verif à faire
     
     persos.indice_x = x;
     persos.indice_y = y;
 }
 
 
-int transmutation(){
-    l
+//PAS ENCORE TERMINE !!!!!!!!
+int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE]){
+    //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
+    int x;
+    int y;
+    Case tmp;
+    printf("Vous venez de trouver un totem de transmutation, vous allez échanger celui-ci avec une autre case.\n")
+    
+    printf("Quelle est la ligne de la case à échanger : ");
+    scanf(%d,&x); //verif à faire
+    printf("Quelle est la colonne de la case à échanger : ");
+    scanf(%d,&y); //verif à faire
+    
+    //intervertir la case du totem avec la case choisie par l'utilisateur
+    plateau_de_jeu[x][y] = plateau_de_jeu[][]
+    plateau_de_jeu[][] = plateau_de_jeu[][]
+    plateau_de_jeu[][] = plateau_de_jeu[][]
 }
