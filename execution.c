@@ -117,6 +117,7 @@ int main{
   if(choice == 1){
     //musique
     play_game();
+  }
   else if(choice == 2){
     printf("you decided to leave");
   }
