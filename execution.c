@@ -1,3 +1,4 @@
+#include "donnee.h"
 #include "fonction.c"
 #include "verification.c"
 
