@@ -1,4 +1,5 @@
 #include "fonction.c"
+#include "verification.c"
 
 void title(){
   printf("    __  ___           __            _      \n");
