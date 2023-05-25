@@ -28,9 +28,11 @@ int play_game(){
   }
   Space board[7][7];
   create_board(board);
-  game(player,tab[i]);
+  char winner[100] =game(player,tab[i]);
+  //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
-  bool choice;
+  int choice;
+  scanf("%d",&choice);
   if(choice){
     play_game();
   }
@@ -96,7 +98,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
           board[j][h].hidden = 0; //afficher le tableau entier
   printf("révélation du plateau\n");
   affiche_plateau(board);
-  return winner;
+  return tab_j[winner-1].nom;
 }
 
 int main{
