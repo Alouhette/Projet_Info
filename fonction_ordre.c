@@ -251,10 +251,64 @@ int transmutation(Player user, Space game_board[TAILLE]){
 
 
 //FAIRE SPACE EFFECT
+int space_effect(Space x, Player user){ //retourne 0 si mort, 1 si en vie
+    a
+}
+
+/*
+void show_symbol(Space x){
+    if (x.monster != 0){
+        //Quel monstre sera affiché
+        switch(x.monster){
+            case 1 :
+                printf("?");
+                break;
+            case 2 :
+                printf("?");
+                break;
+            case 3 :
+                printf("?");
+                break;
+            case 4 :
+                printf("?");
+                break;
+        }
+    }
+    else if (x.relic != 0){
+        //Quelle relique sera affichée
+        switch(x.relic){
+            case 1 :
+                printf("?");
+                break;
+            case 2 :
+                printf("?");
+                break;
+            case 3 :
+                printf("?");
+                break;
+            case 4 :
+                printf("?");
+                break;
+        }
+    }
+    else if (x.treasure==1){
+        //Afficher le trésor
+        printf("?")
+    }
+    else if(x.totem==1){
+        //Afficher le totem
+        printf("?");
+    }
+    else if(x.portal==1){
+        //Afficher le portail
+        printf("?")
+    }
+}
+*/
 
 
 int victory(Player j,int num_j){
-    if(j.tresor == 1 && j.relique == 1){
+    if(j.treasure == 1 && j.relic == 1){
         return num_j+1;
     }
     else{
