@@ -57,7 +57,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         destination = movement();   //fct de mouvement du joueur
         if(destination==2){
           xt=(*x)-1;
-          yt = y:
+          yt = y;
         }
         if(destination==4){
           yt=(*y)-1;
@@ -72,7 +72,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
           yt = y;
         }
         if(xt==0 || yt == 0 || xt==6 || yt==6){
-            en_vie = 0
+            en_vie = 0;
         }
         afficher_plateau(board);
         Space_effect();    //effet de la case de destination
