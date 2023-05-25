@@ -1,7 +1,7 @@
 #include "donnee.h"
-#include "verification.c"
-#include "dislay.c"
-#include "fonction.c"
+#include "verification.h"
+#include "dislay.h"
+#include "fonction.h"
 
 void title(){
   printf("    __  ___           __            _      \n");
