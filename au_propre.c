@@ -2,23 +2,22 @@
 #include <bool.h>
 
 typedef struct{
-    bool cache; //Si la case est cachée (1) ou non (0)
-    char monstre;// Quel monstre. 0 = aucun, 1,2,3,4 = monstre spécifique
-    char relique; // Quelle arme. 0 = aucun, 1,2,3,4 = arme spécifique
-    bool tresor; // Si la case possède un trésor (1) ou non(0)
-    bool portail;
-    bool totem_transmu;
-}Case;
-
-
-typedef struct{
-    char perso; //perso choisi
-    int relique; //1 si relique obtenu, 0 sinon
-    char arme; //Arme equipée pour ce tour
+    char name[100];
+    char character; //perso choisi
+    char weapon; //arme equipe pour ce tour
+    int relic; //1 si relique obtenu, 0 sinon
     int indice_x; 
     int indice_y;
-    char nom[100];
-}Joueur;
+}Player;
+
+typedef struct{
+    bool hidden; // (1)== cache , (0)== visible
+    char monster; // 0 pas de monstre , 1,2,3,4 pour un monstre spécifique
+    char relic; // 0 pas relique , 1,2,3,4 pour une relique spécifique
+    char portal; // 1 = portail , 0 = pas de portail
+    char totem; // 1 = totem , 0 = pas de totem
+    bool treasure; // 1 = tresor , 0 = pas de tresor
+}Space;
 
 
 void clear_buffer(){
@@ -42,7 +41,7 @@ int type_coord(){
     //printf("X\n"); //Printf ici inutile, à mettre avant l'appel de la fonction
     verif = scanf("%df",&n1);
     clear_buffer();
-  }while(n1>5 || n1<1 || verif!=1); //Pour des saisies entre 0 et 4
+  }while(n1>5 || n1<1 || verif!=1); //Pour des saisies entre 1 et 5
 return n1;
 }
 
@@ -113,33 +112,31 @@ void afficher_plateau(Case plateau[7][7]){
 }
 
 
-void afficher_dispo(Personnage_dispo *perso){
-    if((*perso).mage == 1){
+void afficher_dispo(char personnage_dispo[4]){
+    if(personnage_dispo[0] == 1){
         printf("1 - Mage\n");
     }
-    if((*perso).guerrier == 1){
+    if(personnage_dispo[1] == 1){
         printf("2 - Guerrier\n");
     }
-    if((*perso).ranger == 1){
+    if(personnage_dispo[2] == 1){
         printf("3 - Ranger\n");
     }
-    if ((*perso).voleur == 1){
+    if (personnage_dispo[3] == 1){
         printf("4 - Voleur\n");
     }
 }
 
+
 //char personnage_dispo[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
-
-Joueur creer_joueurs(personnage_dispo[4]){
+Joueur creer_joueurs(char personnage_dispo[4]){
+    int choix_perso;
     Joueur personne;
-    printf("veuillez choisir un nom");
+    printf("veuillez choisir un nom : ");
     scanf("%s",personne.nom);
-    char choix_perso;
-    printf("Veuillez choisir le personnage que vous voulez jouez parmi les suivants :\n");
-    afficher_dispo(*perso);
-
-    choix_perso = getchar(); //à refaire avec scanf pour char
-
+    printf("Veuillez choisir le personnage que vous voulez jouer parmi les suivants :\n");
+    afficher_dispo(personnage_dispo);
+    choix_perso = type_int();
     switch(choix_perso){
         case '1':
             if (personnage_dispo[0] == 0){
@@ -251,11 +248,12 @@ int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
 void portail(Joueur persos){
     int x;
     int y;
+    printf("Vous venez de trouver un portail de téléportation ! Veuillez choisir sur quelle case non visité vous rendre.\n");
     
     printf("Sur quelle ligne souhaite-vous vous rendre : ");
-    scanf(%d,&x); //verif à faire
+    x = type_coord();
     printf("Sur quelle colonne souhaite-vous vous rendre : ");
-    scanf(%d,&y); //verif à faire
+    y = type_coord();
     
     persos.indice_x = x;
     persos.indice_y = y;
@@ -270,9 +268,9 @@ int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE]){
     printf("Vous venez de trouver un totem de transmutation, vous allez échanger celui-ci avec une autre case.\n")
     
     printf("Quelle est la ligne de la case à échanger : ");
-    scanf(%d,&x); //verif à faire
+    x = type_coord();
     printf("Quelle est la colonne de la case à échanger : ");
-    scanf(%d,&y); //verif à faire
+    y = type_coord();
     
     //intervertir la case du totem avec la case choisie par l'utilisateur
     tmp = plateau_de_jeu[x][y]
