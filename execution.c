@@ -116,6 +116,7 @@ int main{
   }
   if(choice == 1){
     //musique
+    //to do musique victoire évent secret : https://www.youtube.com/watch?v=Tt7bzxurJ1I
     play_game();
   }
   else if(choice == 2){
