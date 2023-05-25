@@ -20,7 +20,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
     for(int i=0;i<nb_j;i++){
       double time_spent = 0.0; // pour stocker le temps d'exécution du code
       clock_t begin = clock();
-      printf("au tour de %s\n",tab_j[i].nom);
+      printf("au tour de %s\n",tab_j[i].name);
       show_board(board);
       int alive = 1;
       int blocked = 0;
@@ -65,13 +65,13 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
       }
     }
   }
-  printf("and the winner is %s" ,tab_j[winner-1].nom); // montrer le gagnant 
+  printf("and the winner is %s" ,tab_j[winner-1].name); // montrer le gagnant 
   for(int j=0;j<6;j++){
         for(int h=0;h<6;h++){
           board[j][h].hidden = 0; //afficher le tableau entier
   printf("révélation du plateau\n");
   affiche_plateau(board);
-  return tab_j[winner-1].nom;
+  return tab_j[winner-1].name;
 }
 
 int play_game(){
