@@ -30,7 +30,7 @@ int play_game(){
   create_board(board);
   game(player,tab[i]);
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
-  bool choice
+  bool choice;
   if(choice){
     play_game();
   }
