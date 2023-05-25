@@ -17,7 +17,7 @@ int play_game(){
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
   printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
   scanf(%d,&player);
-  while(player < 1 && player > 4){
+  while(player > 1 && player < 5){
     printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
     scanf(%d,&player);
   }
@@ -46,7 +46,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
       double time_spent = 0.0; // pour stocker le temps d'exécution du code
       clock_t begin = clock();
       printf("au tour de %s\n",tab_j[i].nom);
-      afficher_plateau(board);
+      show_board(board);
       int alive = 1;
       int blocked = 0;
       while((alive==1 && blocked = 0)&&(winner == 0)){
