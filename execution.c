@@ -13,36 +13,6 @@ void title(){
   printf("Press 2 to exit\n");
 }
 
-int play_game(){
-  int player;
-  printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
-  printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
-  printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
-  scanf(%d,&player);
-  while(player < 1 && player > 4){
-    printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
-    scanf(%d,&player);
-  }
-  Player *tab;
-  tab = malloc(player*sizeof(Player));
-  for(int i=0;i<player;i++){
-      tab[i] = create_player();
-  }
-  Space board[7][7];
-  create_board(board);
-  char winner[100] =game(player,tab[i]);
-  //ajouter 1 au nbr victoires de winner
-  printf("voulez vous rejouer ? (1=oui , 0=non) \n");
-  int choice;
-  scanf("%d",&choice);
-  if(choice){
-    play_game();
-  }
-  else{
-    printf("merci d'avoir joué");
-  }
-}
-
 int game(int nb_j,Player tab_j,Space board[7][7]){
   int winner=0;
   while(winner == 0){
@@ -101,6 +71,36 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
   printf("révélation du plateau\n");
   affiche_plateau(board);
   return tab_j[winner-1].nom;
+}
+
+int play_game(){
+  int player;
+  printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
+  printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
+  printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
+  scanf(%d,&player);
+  while(player < 1 && player > 4){
+    printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
+    scanf(%d,&player);
+  }
+  Player *tab;
+  tab = malloc(player*sizeof(Player));
+  for(int i=0;i<player;i++){
+      tab[i] = create_player();
+  }
+  Space board[7][7];
+  create_board(board);
+  char winner[100] =game(player,tab[i]);
+  //ajouter 1 au nbr victoires de winner
+  printf("voulez vous rejouer ? (1=oui , 0=non) \n");
+  int choice;
+  scanf("%d",&choice);
+  if(choice){
+    play_game();
+  }
+  else{
+    printf("merci d'avoir joué");
+  }
 }
 
 int main{
