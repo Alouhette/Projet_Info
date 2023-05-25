@@ -147,3 +147,6 @@ int transmutation(Player user, Space game_board[TAILLE]){
     game_board[x][y] = game_board[user.indice_x][user.indice_y]
     game_board[user.indice_x][user.indice_y] = tmp
 }
+
+
+// FAIRE SPACE EFFECT
