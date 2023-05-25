@@ -46,10 +46,10 @@ return n1;
 }
 
 
-void affiche_symbole(Case x){
-    if (x.monstre != 0){
+void show_symbol(Space x){
+    if (x.monster != 0){
         //Quel monstre sera affiché
-        switch(x.monstre){
+        switch(x.monster){
             case 1 :
                 printf("?");
                 break;
@@ -64,9 +64,9 @@ void affiche_symbole(Case x){
                 break;
         }
     }
-    else if (x.relique != 0){
+    else if (x.relic != 0){
         //Quelle relique sera affichée
-        switch(x.relique){
+        switch(x.relic){
             case 1 :
                 printf("?");
                 break;
@@ -81,29 +81,29 @@ void affiche_symbole(Case x){
                 break;
         }
     }
-    else if (x.tresor==1){
+    else if (x.treasure==1){
         //Afficher le trésor
         printf("?")
     }
-    else if(x.totem_transmu==1){
+    else if(x.totem==1){
         //Afficher le totem
         printf("?");
     }
-    else if(x.portail==1){
+    else if(x.portal==1){
         //Afficher le portail
         printf("?")
     }
 }
 
 
-void afficher_plateau(Case plateau[7][7]){
+void show_board(Space board[7][7]){
     for (int i=0;i<6;i++){
         for (int j=0;j<6;j++){
-            if (plateau[i][j].cache == 1){
+            if (board[i][j].hidden == 1){
                 printf("?"); //La case est cachée
             }
             else{
-                affiche_symbole(plateau[i][j]); //La case n'est pas cachée
+                show_symbol(board[i][j]); //La case n'est pas cachée
             }
         }
         printf("\n");
@@ -112,103 +112,103 @@ void afficher_plateau(Case plateau[7][7]){
 }
 
 
-void afficher_dispo(char personnage_dispo[4]){
-    if(personnage_dispo[0] == 1){
+void show_availability(char character_available[4]){
+    if(character_available[0] == 1){
         printf("1 - Mage\n");
     }
-    if(personnage_dispo[1] == 1){
+    if(character_available[1] == 1){
         printf("2 - Guerrier\n");
     }
-    if(personnage_dispo[2] == 1){
+    if(character_available[2] == 1){
         printf("3 - Ranger\n");
     }
-    if (personnage_dispo[3] == 1){
+    if (character_available[3] == 1){
         printf("4 - Voleur\n");
     }
 }
 
 
-//char personnage_dispo[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
-Joueur creer_joueurs(char personnage_dispo[4]){
-    int choix_perso;
-    Joueur personne;
+//char character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
+Joueur create_player(char character_available[4]){
+    int character_chosen;
+    Player user;
     printf("veuillez choisir un nom : ");
-    scanf("%s",personne.nom);
+    scanf("%s",user.name);
     printf("Veuillez choisir le personnage que vous voulez jouer parmi les suivants :\n");
-    afficher_dispo(personnage_dispo);
-    choix_perso = type_int();
-    switch(choix_perso){
+    show_availability(character_available);
+    character_chosen = type_int();
+    switch(character_chosen){
         case '1':
-            if (personnage_dispo[0] == 0){
+            if (character_available[0] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return creer_joueurs(personnage_dispo[]);
+                return create_player(character_available[]);
             }
             else{
-                personnage_dispo[0] = 0;
-                personne.perso = 'm';
-                personne.relique = 0;
-                personne.arme = '?';
-                personne.indice_x = 0;
-                personne.indice_y = 2;
-                return personne;
+                character_available[0] = 0;
+                user.character = 'm';
+                user.relic = 0;
+                user.weapon = '?';
+                user.indice_x = 0;
+                user.indice_y = 2;
+                return user;
             }
             break;
         case '2':
-            if (personnage_dispo[1] == 0){
+            if (character_available[1] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return creer_joueurs(personnage_dispo[]);
+                return create_player(character_available[]);
             }
             else{
-                personnage_dispo[1] = 0;
-                personne.perso = 'g';
-                personne.relique = 0;
-                personne.arme = '?';
-                personne.indice_x = 2;
-                personne.indice_y = 6;
-                return personne;
+                character_available[1] = 0;
+                user.character = 'g';
+                user.relic = 0;
+                user.weapon = '?';
+                user.indice_x = 2;
+                user.indice_y = 6;
+                return user;
             }
             break;
         case '3':
-            if (personnage_dispo[2] == 0){
+            if (character_available[2] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return creer_joueurs(personnage_dispo[]);
+                return create_player(character_available[]);
             }
             else{
-                personnage_dispo[2] = 0;
-                personne.perso = 'r';
-                personne.relique = 0;
-                personne.arme = '?';
-                personne.indice_x = 4;
-                personne.indice_y = 0;
-                return personne;
+                character_available[2] = 0;
+                user.character = 'r';
+                user.relic = 0;
+                user.weapon = '?';
+                user.indice_x = 4;
+                user.indice_y = 0;
+                return user;
             }
             break;
         case '4':
-            if (personnage_dispo[3] == 0){
+            if (character_available[3] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return creer_joueurs(personnage_dispo[]);
+                return create_player(character_available[]);
             }
             else{
-                personnage_dispo[3] = 0;
-                personne.perso = 'v';
-                personne.relique = 0;
-                personne.arme = '?';
-                personne.indice_x = 6;
-                personne.indice_y = 4;
-                return personne;
+                character_available[3] = 0;
+                user.character = 'v';
+                user.relic = 0;
+                user.weapon = '?';
+                user.indice_x = 6;
+                user.indice_y = 4;
+                return user;
             }
             break;
         default :
             printf("Saisie incorrecte, réessayez.\n");
-            return creer_joueurs(personnage_dispo[]);
+            return create_player(character_available[]);
     }
 }
 
 
-int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
-    switch(case_dessus.monstre){
+int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
+    switch(on_space.monstre){
         case '1':
-            if (persos.arme != 1){
+            if (user.weapon != 1){
                 return 0;
             }
             else{
@@ -216,7 +216,7 @@ int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
             }
             break;
         case '2':
-            if (persos.arme != 2){
+            if (user.weapon != 2){
                 return 0;
             }
             else{
@@ -224,7 +224,7 @@ int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
             }
             break;
         case '3':
-            if (persos.arme != 3){
+            if (user.weapon != 3){
                 return 0;
             }
             else{
@@ -232,7 +232,7 @@ int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
             }
             break;
         case '4':
-            if (persos.arme != 4){
+            if (user.weapon != 4){
                 return 0;
             }
             else{
@@ -245,7 +245,7 @@ int combat_monstre(Joueur persos, Case case_dessus){ //0 = mort, 1 = en vie
 }
 
 
-void portail(Joueur persos){
+void portal(Player user){
     int x;
     int y;
     printf("Vous venez de trouver un portail de téléportation ! Veuillez choisir sur quelle case non visité vous rendre.\n");
@@ -255,16 +255,16 @@ void portail(Joueur persos){
     printf("Sur quelle colonne souhaite-vous vous rendre : ");
     y = type_coord();
     
-    persos.indice_x = x;
-    persos.indice_y = y;
+    user.indice_x = x;
+    user.indice_y = y;
 }
 
 
-int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE]){ 
+int transmutation(Player user, Space game_board[TAILLE]){ 
     //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
     int x;
     int y;
-    Case tmp;
+    Space tmp;
     printf("Vous venez de trouver un totem de transmutation, vous allez échanger celui-ci avec une autre case.\n")
     
     printf("Quelle est la ligne de la case à échanger : ");
@@ -273,7 +273,7 @@ int transmutation(Joueur persos, Case plateau_de_jeu[TAILLE]){
     y = type_coord();
     
     //intervertir la case du totem avec la case choisie par l'utilisateur
-    tmp = plateau_de_jeu[x][y]
-    plateau_de_jeu[x][y] = plateau_de_jeu[persos.indice_x][persos.indice_y]
-    plateau_de_jeu[persos.indice_x][persos.indice_y] = tmp
+    tmp = game_board[x][y]
+    game_board[x][y] = game_board[user.indice_x][user.indice_y]
+    game_board[user.indice_x][user.indice_y] = tmp
 }
