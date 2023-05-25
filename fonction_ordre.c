@@ -68,17 +68,6 @@ int forbidden_space(Space board[7][7], int x, int y ){
 }
 
 
-int other_Space(Space board[7][7],int x,int y){
-    if((board[x+1][y].hidden == 1) && (board[x-1][y].hidden == 1) && (board[x][y+1].hidden == 1) && (board[x][y-1].hidden == 1)){
-        printf("toutes les cases adjacentes sont révélés vous ne pouvez plus vous déplacer, passage au joueur suivant");
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
-
-
 //char character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
 Joueur create_player(char character_available[4]){
     int character_chosen;
@@ -271,4 +260,15 @@ int victory(Player j,int num_j){
     else{
         return 0;
     }    
+}
+
+
+int other_Space(Space board[7][7],int x,int y){
+    if((board[x+1][y].hidden == 1) && (board[x-1][y].hidden == 1) && (board[x][y+1].hidden == 1) && (board[x][y-1].hidden == 1)){
+        printf("toutes les cases adjacentes sont révélés vous ne pouvez plus vous déplacer, passage au joueur suivant");
+        return 1;
+    }
+    else{
+        return 0;
+    }
 }
