@@ -1,4 +1,4 @@
-#include "fonction.c"
+#include "fonction.h"
 #include "donnee.h"
 #include <stdio.h>
 int forbidden_space(Space board[7][7], int x, int y );
