@@ -17,6 +17,6 @@ typedef struct{
     char monster; // 0 pas de monstre , 1,2,3,4 monstre associé
     char relic; // 0 pas relique , 1,2,3,4 relique associé
     char portal; // 1 = portail , 0= pas de portail
-    char totem; // 0 pas de totem , 1 = totem n'1 , 2 = totem n'2
+    char totem; // 0 pas de totem , 1 = totem
     bool treasure; // (0) pas de tresor , (1) tresor present.
 }Space;
