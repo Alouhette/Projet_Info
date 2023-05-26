@@ -22,7 +22,7 @@ void create_board(Space board[7][7]){
    for(i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
             int comp1=0;
-            while(forbidden_space(board,x,y)&&(comp2<5)){ 
+            while((forbidden_space(board,x,y))&&(comp2<5)){ 
                 int comp2=0;
                 if(x<5){
                     x++;
@@ -31,7 +31,7 @@ void create_board(Space board[7][7]){
                     x=1;
                 }
                 if(forbidden_space(board,x,y)){
-                     while(forbidden_space(board,x,y)&&(comp2<5)){ 
+                     while((forbidden_space(board,x,y))&&(comp2<5)){ 
                         if(y<5){
                             y++;
                         }
