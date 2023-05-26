@@ -69,6 +69,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
 
 int play_game(){
   int player;
+  int character_tab[4]={1};
   printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
   printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
@@ -80,7 +81,7 @@ int play_game(){
   Player *tab;
   tab = malloc(player*sizeof(Player));
   for(int i=0;i<player;i++){
-      tab[i] = create_player();
+      tab[i] = create_player(character_tab);
   }
   Space board[7][7];
   create_board(board);
