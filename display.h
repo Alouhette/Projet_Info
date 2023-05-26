@@ -5,16 +5,16 @@ void show_symbol(Space x){
         //Quel monstre sera affiché
         switch(x.monster){
             case 1 :
-                printf("?");
+                printf("☣"); //zombie
                 break;
             case 2 :
-                printf("?");
+                printf("♾");//basilic
                 break;
             case 3 :
-                printf("?");
+                printf("⚉");//troll
                 break;
             case 4 :
-                printf("?");
+                printf("⚚");//harpie
                 break;
         }
     }
@@ -22,16 +22,16 @@ void show_symbol(Space x){
         //Quelle relique sera affichée
         switch(x.relic){
             case 1 :
-                printf("🕮");
+                printf("🕮");//grimoire
                 break;
             case 2 :
-                printf("⚔");
+                printf("⚔");//épée
                 break;
             case 3 :
-                printf("⚚");
+                printf("∫");//baton
                 break;
             case 4 :
-                printf("↗");
+                printf("↗");//dague
                 break;
         }
     }
@@ -41,7 +41,7 @@ void show_symbol(Space x){
     }
     else if(x.totem==1){
         //Afficher le totem
-        printf("▲");
+        printf("◮");
     }
     else if(x.portal==1){
         //Afficher le portail
