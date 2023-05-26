@@ -156,7 +156,7 @@ int weapon_choice(){
    }
    else{
        printf("Erreur lors de la séléction d'arme !");
-       weapon = weapon_choice(j);
+       weapon = weapon_choice();
        return weapon;
    }
 }
