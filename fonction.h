@@ -20,7 +20,7 @@ void create_board(Space board[7][7]){
    }
    board[x][y].treasure=1;
    for (i=1; i<5;i++){
-        for(j=1 ; j<5,j++){
+        for(j=1 ; j<5 ; j++){
             while(forbidden_space(board[x][y])){ 
                 x=1 + rand()%5;
                 y=1 + rand()%5;
@@ -30,7 +30,7 @@ void create_board(Space board[7][7]){
    }
    x=1 + rand()%6;
    y=1 + rand()%6;
-   for(i=1 ; i<5,j++){
+   for(i=1 ; i<5 ; j++){
        x=1 + rand()%6;
        y=1 + rand()%6;
        while(forbidden_space(board[x][y])){ 
@@ -45,10 +45,10 @@ void create_board(Space board[7][7]){
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
-   board[x][y].portal=1
+   board[x][y].portal=1;
    x=1 + rand()%6;
    y=1 + rand()%6;
-   for(i=1 ; i<3,j++){
+   for(i=1 ; i<3 ; j++){
        x=1 + rand()%6;
        y=1 + rand()%6;
        while(forbidden_space(board[x][y])){ 
@@ -69,7 +69,7 @@ int forbidden_space(Space board[7][7], int x, int y ){
 
 
 //char character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
-Joueur create_player(char character_available[4]){
+Player create_player(char character_available[4]){
     int character_chosen;
     Player user;
     printf("veuillez choisir un nom : ");
@@ -81,7 +81,7 @@ Joueur create_player(char character_available[4]){
         case '1':
             if (character_available[0] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return create_player(character_available[]);
+                return create_player(character_available);
             }
             else{
                 character_available[0] = 0;
