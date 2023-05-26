@@ -13,10 +13,10 @@ int game(int nb_j,Player *tab_j,Space **board){
       printf("au tour de %s\n",tab_j[i].name);
       double time_spent = 0.0; // pour stocker le temps d'exécution du code
       clock_t begin = clock();
-      while((alive==1 && blocked = 0)&&(winner == 0)){
+      while((alive==1 && blocked == 0)&&(winner == 0)){
         tab_score(tab_j,nb_j);
         } 
-        destination = 0;
+        int destination;
         tab_j[i].weapon = weapon_choice(tab_j[i]);  //choix de l'arme
         destination = movement();   //fct de mouvement du joueur
         int xt,yt;
