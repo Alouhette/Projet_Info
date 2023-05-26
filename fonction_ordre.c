@@ -250,61 +250,56 @@ int transmutation(Player user, Space game_board[TAILLE]){
 }
 
 
-//FAIRE SPACE EFFECT
-int space_effect(Space x, Player user){ //retourne 0 si mort, 1 si en vie
-    a
+void get_relic(Player user, Case on_case){
+    switch(on_case.relic){
+        case 1 :
+            if (user.character == 'm'){
+                user.relic = 1;
+            }
+            break;
+        case 2 :
+            if (user.character == 'g'){
+                user.relic = 1;
+            }
+            break;
+        case 3 :
+            if (user.character == 'r'){
+                user.relic = 1;
+            }
+            break;
+        case 4 :
+            if (user.character == 'v'){
+                user.relic = 1;
+            }
+            break;
+    } 
 }
 
-/*
-void show_symbol(Space x){
+
+int space_effect(Space x, Player user, Space game_board[TAILLE]){ //retourne 0 si mort, 1 si en vie
     if (x.monster != 0){
-        //Quel monstre sera affiché
-        switch(x.monster){
-            case 1 :
-                printf("?");
-                break;
-            case 2 :
-                printf("?");
-                break;
-            case 3 :
-                printf("?");
-                break;
-            case 4 :
-                printf("?");
-                break;
-        }
+        return fight_monster(user, x);
     }
     else if (x.relic != 0){
-        //Quelle relique sera affichée
-        switch(x.relic){
-            case 1 :
-                printf("?");
-                break;
-            case 2 :
-                printf("?");
-                break;
-            case 3 :
-                printf("?");
-                break;
-            case 4 :
-                printf("?");
-                break;
-        }
+        get_relic(user, x);
+        return 1;
     }
     else if (x.treasure==1){
-        //Afficher le trésor
-        printf("?")
+        X
     }
     else if(x.totem==1){
-        //Afficher le totem
-        printf("?");
+        transmutation(user,game_board);
+        return 0;
     }
     else if(x.portal==1){
-        //Afficher le portail
-        printf("?")
+        portal(user);
+        return 1;
+    }
+    else{
+        printf("Erreur avec space_effect.\n");
+        exit(10);
     }
 }
-*/
 
 
 int victory(Player j,int num_j){
