@@ -1,11 +1,11 @@
-int forbidden_space(Space **board, int x, int y ){ 
+int forbidden_space(Space board[7][7], int x, int y ){ 
     if(board[x][y].treasure !=0 &&  board[x][y].monster!=0 && board[x][y].relic!=0){
         return 0;   
     };
     return 1;   
 }
 
-void create_board(Space **board){
+void create_board(Space board[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
         for(j;j<6;j++){
