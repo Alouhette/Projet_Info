@@ -170,7 +170,7 @@ int movement(){
     printf("            [2]            \n");
     printf("            Bas            \n");
     int destination;
-    destination = type_dest()
+    destination = type_dest();
     return destination;
 }
 
