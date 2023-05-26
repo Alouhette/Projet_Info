@@ -27,6 +27,17 @@ void create_board(Space board[7][7]){
         y=1 + rand()%5;
    }
    board[y][x].portal=1;
+   x=1 + rand()%5;
+   y=1 + rand()%5;
+   for(i=1 ; i<3 ; j++){
+       x=1 + rand()%5;
+       y=1 + rand()%5;
+       while(forbidden_space(board,x,y)){ 
+             x=1 + rand()%5;
+             y=1 + rand()%5;
+       }
+       board[y][x].totem=1;
+   }
    for(i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
             int comp1=0;
