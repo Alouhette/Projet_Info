@@ -72,7 +72,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
 
 int play_game(){
   int player,winner;
-  int character_tab[4]={1};
+  int character_tab[4]={1,1,1,1};
   printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
   printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
