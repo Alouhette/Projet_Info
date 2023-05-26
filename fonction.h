@@ -67,8 +67,8 @@ void create_board(Space **board){
    }
 }
 
-//char character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
-Player create_player(char *character_available){
+//int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
+Player create_player(int *character_available){
     int character_chosen;
     Player user;
     printf("veuillez choisir un nom : ");
