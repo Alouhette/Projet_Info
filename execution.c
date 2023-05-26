@@ -37,7 +37,7 @@ int game(int nb_j,Player *tab_j,Space **board){
           yt = tab_j[i].indice_y;
         }
         if(xt==0 || yt == 0 || xt==6 || yt==6){
-            en_vie = 0;
+            alive = 0;
         }
         show_board(board);
         alive = space_effect(board[tab_j[i].indice_x][tab_j[i].indice_y], tab_j[i],board));    //effet de la case de destination
