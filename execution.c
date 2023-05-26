@@ -7,12 +7,12 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
-      double time_spent = 0.0; // pour stocker le temps d'exécution du code
-      clock_t begin = clock();
-      printf("au tour de %s\n",tab_j[i].name);
       show_board(board);
       int alive = 1;
       int blocked = 0;
+      printf("au tour de %s\n",tab_j[i].name);
+      double time_spent = 0.0; // pour stocker le temps d'exécution du code
+      clock_t begin = clock();
       while((alive==1 && blocked = 0)&&(winner == 0)){
         tab_score(tab_j,nb_j);
         } 
