@@ -38,7 +38,7 @@ void show_symbol(Space x){
         }
     }
     else if (x.relic != 0){
-        //Quelle relique sera affichée
+        //Quelle relique sera affichéet
         switch(x.relic){
             case 1 :
                 printf("🕮");//grimoire
@@ -69,7 +69,7 @@ void show_symbol(Space x){
 }
 
 
-void show_board(Space board[7][7]){
+void show_board(Space **board){
     for (int i=0;i<6;i++){
         for (int j=0;j<6;j++){
             if (board[i][j].hidden == 1){
@@ -85,7 +85,7 @@ void show_board(Space board[7][7]){
 }
 
 
-void show_availability(char character_available[4]){
+void show_availability(char *character_available){
     if(character_available[0] == 1){
         printf("1 - Mage\n");
     }
