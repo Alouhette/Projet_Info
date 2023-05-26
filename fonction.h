@@ -177,7 +177,7 @@ int movement(){
 
 
 int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
-    switch(on_space.monstre){
+    switch(on_space.monster){
         case '1':
             if (user.weapon != 1){
                 return 0;
@@ -231,7 +231,7 @@ void portal(Player user){
 }
 
 
-int transmutation(Player user, Space game_board[TAILLE]){ 
+int transmutation(Player user, Space *game_board){ 
     //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
     int x;
     int y;
