@@ -1,9 +1,15 @@
-#include "fonction.h"
+#include "fonction_ordre.C"
 #include "donnee.h"
 #include <stdio.h>
+void create_board(Space board[7][7]);
 int forbidden_space(Space board[7][7], int x, int y );
-int movement();
+Joueur create_player(char character_available[4]);
 int weapon_choice();
+int movement();
+int fight_monster(Player user, Space on_space);
+void portal(Player user);
+int transmutation(Player user, Space game_board[TAILLE]);
+int space_effect(Space x, Player user);
+void show_symbol(Space x);
 int victory(Player j,int num_j);
 int other_Space(Space board[7][7],int x,int y);
-void create_board(Space board[7][7]);
