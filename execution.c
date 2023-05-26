@@ -68,6 +68,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
  show_board(board);
  return winner-1;
  }
+}
 
 int play_game(){
   int player;
