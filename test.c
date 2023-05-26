@@ -11,3 +11,4 @@ void create_board(Space board[7][7]){
             board[j][i] = tile;            
         }
     }
+    int x, y;    
