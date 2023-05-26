@@ -71,7 +71,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
  }
 
 int play_game(){
-  int player;
+  int player,winner;
   int character_tab[4]={1};
   printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
@@ -88,7 +88,7 @@ int play_game(){
   }
   Space board[7][7];
   create_board(board);
-  winner = game(player,tab_j,board);
+  winner = game(player,tab,board);
   //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
   int choice;
