@@ -66,15 +66,14 @@ void create_board(Space board[7][7]){
                 }
             }
             comp1++;            
-            }
-        board[y][x].relic=i;
-      }
+        }
+      board[y][x].relic=i;
    }
    for(i=1; i<5;i++){
-        for(j=1 ; j<5 ; j++){
-            int comp1=0;
+       for(j=1 ; j<5 ; j++){
+            comp1=0;
             while((forbidden_space(board,x,y))&&(comp2<5)){ 
-                int comp2=0;
+                comp2=0;
                 if(y<5){
                     y++;
                 }
