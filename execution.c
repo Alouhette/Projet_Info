@@ -40,7 +40,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         alive = space_effect();    //effet de la case de destination
         winner = victory(tab_j[i],i);  
         blocked = other_space(board,tab_j[i].indice_x,tab_j[i].indice_y); //verif si le joueur peut bouger        
-        }
+      }
       clock_t end = clock(); // calcule le temps écoulé en trouvant la différence (end - begin) et
                              // divisant la différence par CLOCKS_PER_SEC pour convertir en secondes
       time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
@@ -49,11 +49,10 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         winner=0;
       tab_j[i].relic = 0;
       tab_j[i].treasure =0;
-      }
-      for(int j=0;j<6;j++){ //on recache toutes les cases
-        for(int h=0;h<6;h++){
-          board[j][h].hidden = 1;
-        }
+    }
+    for(int j=0;j<6;j++){ //on recache toutes les cases
+      for(int h=0;h<6;h++){
+        board[j][h].hidden = 1;
       }
     }
   }
