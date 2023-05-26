@@ -11,7 +11,7 @@ void title(){
 void tab_score(Player * tab, int nb_j){
   printf("joueurs dans la partie:\n");
   for(int i=0;i<nb_j;i++){
-      printf("%s : \n",tab[i].nom);
+      printf("%s : \n",tab[i].name);
       printf("%d cases révélé ,",tab[i].stats.space_number);
       printf("%d monstre_tué ,",tab[i].stats.kill_count);
       printf("%d trésor trouvé ,",tab[i].stats.treasure_found);
