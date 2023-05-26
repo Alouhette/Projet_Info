@@ -19,7 +19,7 @@ void create_board(Space board[7][7]){
         y=1 + rand()%5;
    }
    board[y][x].treasure=1;
-   for (i=1; i<5;i++){
+   for(i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
             int comp1=0;
             while(forbidden_space(board,x,y)&&(comp2<5)){ 
