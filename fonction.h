@@ -96,7 +96,7 @@ void create_board(Space board[7][7]){
           board[y][x].monster=i;
         }
    }
-
+}
 //int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
 Player create_player(int *character_available){
     int character_chosen;
