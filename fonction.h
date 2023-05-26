@@ -3,7 +3,7 @@ void create_board(Space board[7][7]){
     for(i;i<6;i++){
         for(j;j<6;j++){
             //creer les elem case (caché et sans monstre tresor et arme)
-            case tile;
+            Space tile;
             tile.hidden = 1;
             tile.monster = 0;
             tile.relic = 0;
