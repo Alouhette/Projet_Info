@@ -76,7 +76,7 @@ Player create_player(int *character_available){
     show_availability(character_available);
     character_chosen = type_int();
     switch(character_chosen){
-        case '1':
+        case 1:
             if (character_available[0] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
@@ -91,7 +91,7 @@ Player create_player(int *character_available){
                 return user;
             }
             break;
-        case '2':
+        case 2:
             if (character_available[1] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
@@ -106,7 +106,7 @@ Player create_player(int *character_available){
                 return user;
             }
             break;
-        case '3':
+        case 3:
             if (character_available[2] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
@@ -121,7 +121,7 @@ Player create_player(int *character_available){
                 return user;
             }
             break;
-        case '4':
+        case 4:
             if (character_available[3] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
