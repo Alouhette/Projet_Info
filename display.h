@@ -20,56 +20,57 @@ void tab_score(Player * tab, int nb_j){
   
 
 void show_symbol(Space x){
-    if (x.cleared == 0){
-      if (x.monster != 0){
-          //Quel monstre sera affiché
-          switch(x.monster){
-              case 1 :
-                  printf("☣"); //zombie
-                  break;
-              case 2 :
-                  printf("♾");//basilic
-                  break;
-              case 3 :
-                  printf("⚉");//troll
-                  break;
-              case 4 :
-                  printf("⚚");//harpie
-                  break;
-          }
-      }
-      else if (x.relic != 0){
-          //Quelle relique sera affichéet
-          switch(x.relic){
-              case 1 :
-                  printf("🕮");//grimoire
-                  break;
-              case 2 :
-                  printf("⚔");//épée
-                  break;
-              case 3 :
-                  printf("∫");//baton
-                  break;
-              case 4 :
-                  printf("↗");//dague
-                  break;
-          }
-      }
-      else if (x.treasure==1){
-          //Afficher le trésor
-          printf("⌧"); 
-      }
-      else if(x.totem==1){
-          //Afficher le totem
-          printf("◮");
-      }
-      else if(x.portal==1){
-          //Afficher le portail
-          printf("֍"); 
-      }
+  if (x.cleared == 0){
+    if (x.monster != 0){
+      //Quel monstre sera affiché
+      switch(x.monster){
+          case 1 :
+              printf("☣"); //zombie
+              break;
+          case 2 :
+              printf("♾");//basilic
+              break;
+          case 3 :
+              printf("⚉");//troll
+              break;
+          case 4 :
+              printf("⚚");//harpie
+              break;
+       }
     }
-    else{
+    else if (x.relic != 0){
+      //Quelle relique sera affichéet
+      switch(x.relic){
+          case 1 :
+              printf("🕮");//grimoire
+              break;
+          case 2 :
+              printf("⚔");//épée
+              break;
+          case 3 :
+              printf("∫");//baton
+              break;
+          case 4 :
+              printf("↗");//dague
+              break;
+      }
+   }
+   else if (x.treasure==1){
+       //Afficher le trésor
+       printf("⌧"); 
+   }
+   else if(x.totem==1){
+       //Afficher le totem
+       printf("◮");
+   }
+   else if(x.portal==1){
+       //Afficher le portail
+       printf("֍"); 
+   }
+  }
+  else{
       printf("| |");
+  }
 }
 
 
