@@ -24,19 +24,19 @@ void create_board(Space board[7][7]){
             int comp1=0;
             while((forbidden_space(board,x,y))&&(comp2<5)){ 
                 int comp2=0;
-                if(x<5){
-                    x++;
+                if(y<5){
+                    y++;
                 }
                 else{
-                    x=1;
+                    y=1;
                 }
                 if(forbidden_space(board,x,y)){
                      while((forbidden_space(board,x,y))&&(comp2<5)){ 
-                        if(y<5){
-                            y++;
+                        if(x<5){
+                            x++;
                         }
                         else{
-                            y=1;
+                            x=1;
                         }
                         comp2++;
                     }
