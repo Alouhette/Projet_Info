@@ -13,6 +13,7 @@ typedef struct{
     char character; //perso choisi
     char weapon; //arme equipe pour ce tour
     int relic; //1 si relique obtenu, 0 sinon
+    int treasure; // si 1 tresor obtenu , 0 sinon
     int indice_x; 
     int indice_y;
     Score stats;
