@@ -44,7 +44,7 @@ void create_board(Space board[7][7]){
              x=1 + rand()%5;
              y=1 + rand()%5;
        }
-       board[x][y].relic=1;
+       board[x][y].relic=i;
    }
    x=1 + rand()%5;
    y=1 + rand()%5;
