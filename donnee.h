@@ -24,6 +24,6 @@ typedef struct{
 
 typedef struct{
     int space_number;
-    int kill_counter;
+    int kill_count;
     int treasure_found;
 }Score;
