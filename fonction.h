@@ -169,6 +169,7 @@ int movement(){
     printf(" Gauche [4]     [6] Droite \n");
     printf("            [2]            \n");
     printf("            Bas            \n");
+    int destination;
     scanf("%d",&destination);
     return destination;
 }
