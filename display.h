@@ -8,7 +8,7 @@ void title(){
   printf("Press 2 to exit\n");
 }
 
-void tab_score(Player tab[], int nb_j){
+void tab_score(Player * tab, int nb_j){
   printf("joueurs dans la partie:\n");
   for(int i=0;i<nb_j;i++){
       printf("%s : \n",tab[i].nom);
