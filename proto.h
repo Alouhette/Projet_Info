@@ -1,5 +1,6 @@
-#include "fonction_ordre.C"
+#include "fonction.h"
 #include "donnee.h"
+#include "display.h"
 #include <stdio.h>
 void create_board(Space board[7][7]);
 int forbidden_space(Space board[7][7], int x, int y );
