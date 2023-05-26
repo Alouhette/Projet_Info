@@ -22,30 +22,30 @@ void show_symbol(Space x){
         //Quelle relique sera affichée
         switch(x.relic){
             case 1 :
-                printf("?");
+                printf("🕮");
                 break;
             case 2 :
-                printf("?");
+                printf("⚔");
                 break;
             case 3 :
-                printf("?");
+                printf("⚚");
                 break;
             case 4 :
-                printf("?");
+                printf("↗");
                 break;
         }
     }
     else if (x.treasure==1){
         //Afficher le trésor
-        printf("?")
+        printf("⌧")
     }
     else if(x.totem==1){
         //Afficher le totem
-        printf("?");
+        printf("▲");
     }
     else if(x.portal==1){
         //Afficher le portail
-        printf("?")
+        printf("֍")
     }
 }
 
