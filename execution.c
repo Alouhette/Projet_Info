@@ -38,7 +38,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         if(xt==0 || yt == 0 || xt==6 || yt==6){
             en_vie = 0;
         }
-        afficher_plateau(board);
+        show_board(board);
         alive = space_effect();    //effet de la case de destination
         winner = victory(tab_j[i],i);  
         blocked = other_space(board,tab_j[i].indice_x,tab_j[i].indice_y); //verif si le joueur peut bouger        
