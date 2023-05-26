@@ -96,7 +96,7 @@ Player create_player(char character_available[4]){
         case '2':
             if (character_available[1] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return create_player(character_available[]);
+                return create_player(character_available);
             }
             else{
                 character_available[1] = 0;
@@ -111,7 +111,7 @@ Player create_player(char character_available[4]){
         case '3':
             if (character_available[2] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return create_player(character_available[]);
+                return create_player(character_available);
             }
             else{
                 character_available[2] = 0;
@@ -126,7 +126,7 @@ Player create_player(char character_available[4]){
         case '4':
             if (character_available[3] == 0){
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
-                return create_player(character_available[]);
+                return create_player(character_available);
             }
             else{
                 character_available[3] = 0;
@@ -140,7 +140,7 @@ Player create_player(char character_available[4]){
             break;
         default :
             printf("Saisie incorrecte, réessayez.\n");
-            return create_player(character_available[]);
+            return create_player(character_available);
     }
 }
 
@@ -152,7 +152,7 @@ int weapon_choice(){
    printf("2 - Le miroir\n");
    printf("3 - La Hache\n");
    printf("4 - L'Arc\n");
-   scanf(%d,&weapon);
+   scanf('%d',&weapon);
    if((weapon > 0) && (weapon <5)){
        return weapon;
    }
