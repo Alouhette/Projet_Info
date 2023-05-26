@@ -1,12 +1,12 @@
 
-int forbidden_space(Space board[7][7], int x, int y ){ 
+int forbidden_space(Space **board, int x, int y ){ 
     if(board[x][y].treasure !=0 &&  board[x][y].monster!=0 && board[x][y].relic!=0){
         return 0;   
     };
     return 1;   
 }
 
-void create_board(Space board[7][7]){
+void create_board(Space **board{
     int i=0,j=0;
     for(i;i<6;i++){
         for(j;j<6;j++){
@@ -68,7 +68,7 @@ void create_board(Space board[7][7]){
 }
 
 //char character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
-Player create_player(char character_available[4]){
+Player create_player(char *character_available){
     int character_chosen;
     Player user;
     printf("veuillez choisir un nom : ");
