@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <bool.h>
 
 typedef struct{
     char name[100];
@@ -14,12 +13,12 @@ typedef struct{
 }Player;
 
 typedef struct{
-    bool hidden; // (1)== cache , (0)== visible
+    int hidden; // (1)== cache , (0)== visible
     char monster; // 0 pas de monstre , 1,2,3,4 pour un monstre spécifique
     char relic; // 0 pas relique , 1,2,3,4 pour une relique spécifique
     char portal; // 1 = portail , 0 = pas de portail
     char totem; // 1 = totem , 0 = pas de totem
-    bool treasure; // 1 = tresor , 0 = pas de tresor
+    int treasure; // 1 = tresor , 0 = pas de tresor
 }Space;
 
 typedef struct{
