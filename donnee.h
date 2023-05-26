@@ -20,3 +20,9 @@ typedef struct{
     char totem; // 1 = totem , 0 = pas de totem
     bool treasure; // 1 = tresor , 0 = pas de tresor
 }Space;
+
+typedef struct{
+    int space_number;
+    int kill_counter;
+    int treasure_found;
+}Score;
