@@ -6,7 +6,7 @@ int forbidden_space(Space **board, int x, int y ){
     return 1;   
 }
 
-void create_board(Space **board{
+void create_board(Space **board){
     int i=0,j=0;
     for(i;i<6;i++){
         for(j;j<6;j++){
