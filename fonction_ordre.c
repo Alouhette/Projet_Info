@@ -149,7 +149,7 @@ int weapon_choice(){
    int weapon;
    printf("veuillez choisir une arme (numéro):\n");
    printf("1 - La Torche\n");
-   printf("2 - Le Bouclier\n");
+   printf("2 - Le miroir\n");
    printf("3 - La Hache\n");
    printf("4 - L'Arc\n");
    scanf(%d,&weapon);
