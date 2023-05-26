@@ -3,7 +3,7 @@
 #include "display.h"
 #include "fonction.h"
 
-int game(int nb_j,Player tab_j,Space **board){
+int game(int nb_j,Player *tab_j,Space **board){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
