@@ -24,7 +24,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         if(destination==2){
           xt=(*x)-1;
           yt = y;
-        }
+        }type_int()
         if(destination==4){
           yt=(*y)-1;
           xt = x;
@@ -74,10 +74,10 @@ int play_game(){
   printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
   printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
   printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
-  scanf(%d,&player);
-  while(player < 1 && player > 4){
+  player = type_int();
+  while(player < 1 || player > 4){
     printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
-    scanf(%d,&player);
+    player = type_int();
   }
   Player *tab;
   tab = malloc(player*sizeof(Player));
@@ -90,7 +90,12 @@ int play_game(){
   //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
   int choice;
-  scanf("%d",&choice);
+  choice = type_int();
+   while(choice < 0 || choice > 1){
+    printf("Saisie incorrecte, réessayez.\n");
+    choice = type_int();
+  }
+  
   if(choice){
     play_game();
   }
@@ -102,16 +107,14 @@ int play_game(){
 int main{
   title();
   int choice;
-  scanf("%d",&choice);
-  //faire la verif scanf
-  while(choice<1 && choice>2){
-    printf("valeur rentré incorrect veuillez resaisir");
-    scanf("%d",&choice);
-    //faire la verif scanf
+  choice = type_int();
+  while(choice<1 || choice>2){
+    printf("valeur rentré incorrecte veuillez resaisir");
+    choice = type_int();
   }
   if(choice == 1){
     //musique
-    //to do musique victoire évent secret : https://www.youtube.com/watch?v=Tt7bzxurJ1I
+    //to do : musique victoire évent secret : https://www.youtube.com/watch?v=Tt7bzxurJ1I
     play_game();
   }
   else if(choice == 2){
