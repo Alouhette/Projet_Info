@@ -56,7 +56,7 @@ void show_symbol(Space x){
     }
     else if (x.treasure==1){
         //Afficher le trésor
-        printf("⌧")
+        printf("⌧"); 
     }
     else if(x.totem==1){
         //Afficher le totem
@@ -64,7 +64,7 @@ void show_symbol(Space x){
     }
     else if(x.portal==1){
         //Afficher le portail
-        printf("֍")
+        printf("֍"); 
     }
 }
 
