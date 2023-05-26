@@ -276,7 +276,7 @@ void get_relic(Player user, Space on_case){
 }
 
 
-int space_effect(Space x, Player user, Space * game_board){ //retourne 0 si mort, 1 si en vie
+int space_effect(Space x, Player user, Space ** game_board){ //retourne 0 si mort, 1 si en vie
     if (x.monster != 0){
         return fight_monster(user, x);
     }
