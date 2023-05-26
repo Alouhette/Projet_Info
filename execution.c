@@ -21,20 +21,20 @@ int game(int nb_j,Player *tab_j,Space **board){
         destination = movement();   //fct de mouvement du joueur
         int xt,yt;
         if(destination==2){
-          xt=(*x)-1;
-          yt = y;
+          xt=tab_j[i].indice_x-1;
+          yt = tab_j[i].indice_y;
         }type_int()
         if(destination==4){
-          yt=(*y)-1;
-          xt = x;
+          yt=tab_j[i].indice_y-1;
+          xt = tab_j[i].indice_x;
         }
         if(destination==6){
-          yt=(*y)+1;
-          xt = x;
+          yt=tab_j[i].indice_y+1;
+          xt = tab_j[i].indice_x;
         }
         if(destination==8){
-          xt=(*x)+1;
-          yt = y;
+          xt=tab_j[i].indice_x+1;
+          yt = tab_j[i].indice_y;
         }
         if(xt==0 || yt == 0 || xt==6 || yt==6){
             en_vie = 0;
