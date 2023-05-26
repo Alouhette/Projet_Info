@@ -23,7 +23,7 @@ int game(int nb_j,Player *tab_j,Space **board){
         if(destination==2){
           xt=tab_j[i].indice_x-1;
           yt = tab_j[i].indice_y;
-        }type_int()
+        }
         if(destination==4){
           yt=tab_j[i].indice_y-1;
           xt = tab_j[i].indice_x;
