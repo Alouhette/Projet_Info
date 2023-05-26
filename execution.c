@@ -85,7 +85,7 @@ int play_game(){
   }
   Space board[7][7];
   create_board(board);
-  winner = game(player,board);
+  winner = game(player,tab_j,board);
   //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
   int choice;
