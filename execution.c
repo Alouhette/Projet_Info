@@ -14,6 +14,10 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
       int alive = 1;
       int blocked = 0;
       while((alive==1 && blocked = 0)&&(winner == 0)){
+        printf("joueurs dans la partie :\n");
+        for(int u=0;i<nb_j;i++){
+          printf("%s\n",tab_j[u].nom);
+        } 
         destination = 0;
         tab_j[i].weapon = weapon_choice(tab_j[i]);  //choix de l'arme
         destination = movement();   //fct de mouvement du joueur
