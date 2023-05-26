@@ -57,7 +57,6 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
         }
       }
     }
-  }
  printf("and the winner is %s" ,tab_j[winner-1].name); // montrer le gagnant 
  for(int j=0;j<6;j++){
    for(int h=0;h<6;h++){
