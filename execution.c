@@ -51,21 +51,23 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
         winner=0;
       tab_j[i].relic = 0;
       tab_j[i].treasure =0;
-    }
-    for(int j=0;j<6;j++){ //on recache toutes les cases
-      for(int h=0;h<6;h++){
-        board[j][h].hidden = 1;
+      for(int j=0;j<6;j++){ //on recache toutes les cases
+        for(int h=0;h<6;h++){
+          board[j][h].hidden = 1;
+        }
       }
     }
   }
-  printf("and the winner is %s" ,tab_j[winner-1].name); // montrer le gagnant 
-  for(int j=0;j<6;j++){
-        for(int h=0;h<6;h++){
-          board[j][h].hidden = 0; //afficher le tableau entier
-  printf("révélation du plateau\n");
-  show_board(board);
-  return winner-1;
-}
+ printf("and the winner is %s" ,tab_j[winner-1].name); // montrer le gagnant 
+ for(int j=0;j<6;j++){
+   for(int h=0;h<6;h++){
+     board[j][h].hidden = 0; //afficher le tableau entier
+   }
+ }
+ printf("révélation du plateau\n");
+ show_board(board);
+ return winner-1;
+ }
 
 int play_game(){
   int player;
