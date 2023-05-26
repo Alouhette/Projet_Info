@@ -63,7 +63,7 @@ int game(int nb_j,Player tab_j,Space board[7][7]){
         for(int h=0;h<6;h++){
           board[j][h].hidden = 0; //afficher le tableau entier
   printf("révélation du plateau\n");
-  affiche_plateau(board);
+  show_board(board);
   return tab_j[winner-1].name;
 }
 
