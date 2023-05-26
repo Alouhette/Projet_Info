@@ -10,6 +10,7 @@ typedef struct{
     int relic; //1 si relique obtenu, 0 sinon
     int indice_x; 
     int indice_y;
+    Score stats;
 }Player;
 
 typedef struct{
