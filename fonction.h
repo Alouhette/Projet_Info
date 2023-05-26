@@ -19,8 +19,8 @@ void create_board(Space board[7][7]){
         }
     }
    int x, y;    
-   x=1 + rand()%6;
-   y=1 + rand()%6;
+   x=1 + rand()%5;
+   y=1 + rand()%5;
    while(forbidden_space(board,x,y)){ 
         x=1 + rand()%5;
         y=1 + rand()%5;
@@ -35,29 +35,29 @@ void create_board(Space board[7][7]){
             board[x][y].monster=i;
         }
    }
-   x=1 + rand()%6;
-   y=1 + rand()%6;
+   x=1 + rand()%5;
+   y=1 + rand()%5;
    for(i=1 ; i<5 ; j++){
-       x=1 + rand()%6;
-       y=1 + rand()%6;
+       x=1 + rand()%5;
+       y=1 + rand()%5;
        while(forbidden_space(board,x,y)){ 
              x=1 + rand()%5;
              y=1 + rand()%5;
        }
        board[x][y].relic=1;
    }
-   x=1 + rand()%6;
-   y=1 + rand()%6;
+   x=1 + rand()%5;
+   y=1 + rand()%5;
    while(forbidden_space(board,x,y)){ 
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
    board[x][y].portal=1;
-   x=1 + rand()%6;
-   y=1 + rand()%6;
+   x=1 + rand()%5;
+   y=1 + rand()%5;
    for(i=1 ; i<3 ; j++){
-       x=1 + rand()%6;
-       y=1 + rand()%6;
+       x=1 + rand()%5;
+       y=1 + rand()%5;
        while(forbidden_space(board,x,y)){ 
              x=1 + rand()%5;
              y=1 + rand()%5;
