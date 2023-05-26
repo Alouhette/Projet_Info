@@ -43,10 +43,11 @@ void create_board(Space board[7][7]){
        }
        board[y][x].totem=1;
    }
+   int comp1,comp2;
    for(i=1; i<5;i++){
-      int comp1=0;
+      comp1=0;
       while((forbidden_space(board,x,y))&&(comp2<5)){ 
-           int comp2=0;
+           comp2 = 0;
            if(y<5){
                y++;
            }
