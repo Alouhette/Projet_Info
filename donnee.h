@@ -3,6 +3,12 @@
 #include <time.h>
 
 typedef struct{
+    int space_number;
+    int kill_count;
+    int treasure_found;
+}Score;
+
+typedef struct{
     char name[100];
     char character; //perso choisi
     char weapon; //arme equipe pour ce tour
@@ -20,9 +26,3 @@ typedef struct{
     char totem; // 1 = totem , 0 = pas de totem
     int treasure; // 1 = tresor , 0 = pas de tresor
 }Space;
-
-typedef struct{
-    int space_number;
-    int kill_count;
-    int treasure_found;
-}Score;
