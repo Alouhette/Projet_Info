@@ -1,5 +1,16 @@
 <?????>
 
+void title(){
+  printf("    __  ___           __            _      \n");
+  printf("   /  |/  /_  _______/ /____  _____(_)___ _\n");
+  printf("  / /|_/ / / / / ___/ __/ _ \/ ___/ / __ `/\n");
+  printf(" / /  / / /_/ (__  ) /_/  __/ /  / / /_/ / \n");
+  printf("/_/  /_/\__, /____/\__/\___/_/  /_/\__,_/  \n");
+  printf("       /____/                              \n");
+  printf("Press 1 to start in normal mode\n");
+  printf("Press 2 to exit\n");
+}
+
 void show_symbol(Space x){
     if (x.monster != 0){
         //Quel monstre sera affiché
