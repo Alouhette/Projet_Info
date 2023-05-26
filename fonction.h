@@ -231,7 +231,7 @@ void portal(Player user){
 }
 
 
-int transmutation(Player user, Space *game_board){ 
+int transmutation(Player user, Space **game_board){ 
     //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
     int x;
     int y;
