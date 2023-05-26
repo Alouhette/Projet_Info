@@ -4,7 +4,6 @@ int forbidden_space(Space board[7][7], int x, int y ){
     };
     return 0;   
 }
-
 void create_board(Space board[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
