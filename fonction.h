@@ -230,7 +230,7 @@ void portal(Player user){
 }
 
 
-int transmutation(Player user, Space **game_board){ 
+int transmutation(Player user, Space game_board[7][7]){ 
     //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
     int x;
     int y;
@@ -275,7 +275,7 @@ void get_relic(Player user, Space on_case){
 }
 
 
-int space_effect(Space x, Player user, Space ** game_board){ //retourne 0 si mort, 1 si en vie
+int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si mort, 1 si en vie
     if (x.monster != 0){
         return fight_monster(user, x);
     }
@@ -311,7 +311,7 @@ int victory(Player j,int num_j){
 }
 
 
-int other_space(Space ** board,int x,int y){
+int other_space(Space board[7][7],int x,int y){
     if((board[x+1][y].hidden == 1) && (board[x-1][y].hidden == 1) && (board[x][y+1].hidden == 1) && (board[x][y-1].hidden == 1)){
         printf("toutes les cases adjacentes sont révélés vous ne pouvez plus vous déplacer, passage au joueur suivant");
         return 1;
