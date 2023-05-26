@@ -8,7 +8,7 @@ void create_board(Space board[7][7]){
             tile.monster = 0;
             tile.relic = 0;
             tile.treasure = 0;
-            plateau[7][7] = tile;            
+            board[7][7] = tile;            
         }
     }
    int x, y;    
