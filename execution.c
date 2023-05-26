@@ -3,7 +3,7 @@
 #include "display.h"
 #include "fonction.h"
 
-char game(int nb_j,Player *tab_j,Space **board){
+int game(int nb_j,Player *tab_j,Space **board){
   int winner=0;
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
@@ -64,7 +64,7 @@ char game(int nb_j,Player *tab_j,Space **board){
           board[j][h].hidden = 0; //afficher le tableau entier
   printf("révélation du plateau\n");
   show_board(board);
-  return tab_j[winner-1].name;
+  return winner-1;
 }
 
 int play_game(){
@@ -85,7 +85,7 @@ int play_game(){
   }
   Space board[7][7];
   create_board(board);
-  char winner[100] =game(player,board);
+  winner = game(player,board);
   //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
   int choice;
