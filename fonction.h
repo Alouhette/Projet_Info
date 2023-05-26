@@ -250,7 +250,7 @@ int transmutation(Player user, Space **game_board){
 }
 
 
-void get_relic(Player user, Case on_case){
+void get_relic(Player user, Space on_case){
     switch(on_case.relic){
         case 1 :
             if (user.character == 'm'){
@@ -285,7 +285,7 @@ int space_effect(Space x, Player user, Space * game_board){ //retourne 0 si mort
         return 1;
     }
     else if (x.treasure==1){
-        X
+        user.treasure = 1;
     }
     else if(x.totem==1){
         transmutation(user,game_board);
