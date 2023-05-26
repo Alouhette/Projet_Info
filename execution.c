@@ -103,7 +103,7 @@ int play_game(){
   }
 }
 
-int main{
+int main(){
   title();
   int choice;
   choice = type_int();
