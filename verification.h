@@ -3,7 +3,7 @@ void clear_buffer(){
   }
 }
 int type_int(){
-  float n1;
+  int n1;
   int verif;
   do{
     verif = scanf("%d",&n1);
@@ -12,7 +12,7 @@ int type_int(){
 return n1;
 }
 int type_coord(){
-  float n1;
+  int n1;
   int verif;
   do{
     verif = scanf("%d",&n1);
@@ -21,7 +21,7 @@ int type_coord(){
 return n1;
 }
 int type_dest(){
-  float n1;
+  int n1;
   int verif;
   int verif2=0;
   do{
