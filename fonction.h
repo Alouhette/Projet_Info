@@ -150,7 +150,7 @@ int weapon_choice(){
    printf("2 - Le miroir\n");
    printf("3 - La Hache\n");
    printf("4 - L'Arc\n");
-   scanf('%d',&weapon);
+   scanf("%d",&weapon);
    if((weapon > 0) && (weapon <5)){
        return weapon;
    }
