@@ -3,7 +3,7 @@ void title(){
   printf("   /  |/  /_ _____ / /____ ____(_)__ _\n");
   printf("  / /__/ / // /_-</ __/ -_) __/ / _ `/\n");
   printf(" /_/  /_/__, /___/___/___/_/ /_/__,_/\n");
-  printf("       /___/            n");
+  printf("       /___/            \n");
   printf("Press 1 to start in normal mode\n");
   printf("Press 2 to exit\n");
 }
