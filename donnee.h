@@ -26,4 +26,5 @@ typedef struct{
     char portal; // 1 = portail , 0 = pas de portail
     char totem; // 1 = totem , 0 = pas de totem
     int treasure; // 1 = tresor , 0 = pas de tresor
+    int cleared; //0 = case faite, 1 = pas faite
 }Space;
