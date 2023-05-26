@@ -40,7 +40,7 @@ int game(int nb_j,Player *tab_j,Space **board){
             alive = 0;
         }
         show_board(board);
-        alive = space_effect(board[tab_j[i].indice_x][tab_j[i].indice_y], tab_j[i],board));    //effet de la case de destination
+        alive = space_effect(board[tab_j[i].indice_x][tab_j[i].indice_y], tab_j[i],board);    //effet de la case de destination
         winner = victory(tab_j[i],i);  
         blocked = other_space(board,tab_j[i].indice_x,tab_j[i].indice_y); //verif si le joueur peut bouger        
       }
