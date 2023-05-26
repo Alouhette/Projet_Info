@@ -85,7 +85,7 @@ void show_board(Space **board){
 }
 
 
-void show_availability(char *character_available){
+void show_availability(int *character_available){
     if(character_available[0] == 1){
         printf("1 - Mage\n");
     }
