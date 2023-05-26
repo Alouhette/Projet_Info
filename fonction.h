@@ -25,14 +25,14 @@ void create_board(Space board[7][7]){
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
-   board[x][y].treasure=1;
+   board[y][x].treasure=1;
    for (i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
             while(forbidden_space(board,x,y)){ 
                 x=1 + rand()%5;
                 y=1 + rand()%5;
             }
-            board[x][y].monster=i;
+            board[y][x].monster=i;
         }
    }
    x=1 + rand()%5;
@@ -44,7 +44,7 @@ void create_board(Space board[7][7]){
              x=1 + rand()%5;
              y=1 + rand()%5;
        }
-       board[x][y].relic=i;
+       board[y][x].relic=i;
    }
    x=1 + rand()%5;
    y=1 + rand()%5;
@@ -52,7 +52,7 @@ void create_board(Space board[7][7]){
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
-   board[x][y].portal=1;
+   board[y][x].portal=1;
    x=1 + rand()%5;
    y=1 + rand()%5;
    for(i=1 ; i<3 ; j++){
@@ -62,7 +62,7 @@ void create_board(Space board[7][7]){
              x=1 + rand()%5;
              y=1 + rand()%5;
        }
-       board[x][y].totem=1;
+       board[y][x].totem=1;
    }
 }
 
