@@ -24,8 +24,7 @@ void create_board(Space board[7][7]){
         x=1 + rand()%5;
         y=1 + rand()%5;
    }
-   board[y][x].treasure=1;
-   int x, y;    
+   board[y][x].treasure=1;   
    x=1 + rand()%5;
    y=1 + rand()%5;
    while(forbidden_space(board,x,y)){ 
