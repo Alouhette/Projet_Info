@@ -14,7 +14,7 @@ void title(){
 
 void tab_score(Player tab[], int nb_j){
   printf("joueurs dans la partie:\n");
-  for(int u=0;i<nb_j;i++){
+  for(int i=0;i<nb_j;i++){
       printf("%s : \n",tab_j[u].nom);
       printf("%d cases révélé ,",tab_j[u].score.space_number);
       printf("%d monstre_tué ,",tab_j[u].score.kill_count);
