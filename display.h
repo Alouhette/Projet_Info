@@ -1,5 +1,6 @@
 <?????>
 
+
 void title(){
   printf("    __  ___           __            _      \n");
   printf("   /  |/  /_  _______/ /____  _____(_)___ _\n");
@@ -10,7 +11,6 @@ void title(){
   printf("Press 1 to start in normal mode\n");
   printf("Press 2 to exit\n");
 }
-
 
 
 void show_symbol(Space x){
