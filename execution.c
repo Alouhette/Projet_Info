@@ -19,6 +19,7 @@ int game(int nb_j,Player *tab_j,Space **board){
         destination = 0;
         tab_j[i].weapon = weapon_choice(tab_j[i]);  //choix de l'arme
         destination = movement();   //fct de mouvement du joueur
+        int xt,yt;
         if(destination==2){
           xt=(*x)-1;
           yt = y;
