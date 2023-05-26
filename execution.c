@@ -1,6 +1,6 @@
 #include "donnee.h"
 #include "verification.h"
-#include "dislay.h"
+#include "display.h"
 #include "fonction.h"
 
 int game(int nb_j,Player tab_j,Space board[7][7]){
