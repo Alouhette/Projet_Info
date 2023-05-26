@@ -49,6 +49,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
       printf("Tle temps écoulé pour le tour est de %f secondes", time_spent);
       if((alive==0)&&(winner =! 0)){ //verification de si le joueurs à reussi à gagner en étant mort
         winner=0;
+      }
       tab_j[i].relic = 0;
       tab_j[i].treasure =0;
       for(int j=0;j<6;j++){ //on recache toutes les cases
@@ -68,7 +69,6 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
  show_board(board);
  return winner-1;
  }
-}
 
 int play_game(){
   int player;
