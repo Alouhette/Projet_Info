@@ -11,6 +11,8 @@ void title(){
   printf("Press 2 to exit\n");
 }
 
+
+
 void show_symbol(Space x){
     if (x.monster != 0){
         //Quel monstre sera affiché
