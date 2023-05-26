@@ -236,7 +236,7 @@ int transmutation(Player user, Space *game_board){
     int x;
     int y;
     Space tmp;
-    printf("Vous venez de trouver un totem de transmutation, vous allez échanger celui-ci avec une autre case.\n")
+    printf("Vous venez de trouver un totem de transmutation, vous allez échanger celui-ci avec une autre case.\n");
     
     printf("Quelle est la ligne de la case à échanger : ");
     x = type_coord();
@@ -244,9 +244,9 @@ int transmutation(Player user, Space *game_board){
     y = type_coord();
     
     //intervertir la case du totem avec la case choisie par l'utilisateur
-    tmp = game_board[x][y]
-    game_board[x][y] = game_board[user.indice_x][user.indice_y]
-    game_board[user.indice_x][user.indice_y] = tmp
+    tmp = game_board[x][y];
+    game_board[x][y] = game_board[user.indice_x][user.indice_y];
+    game_board[user.indice_x][user.indice_y] = tmp;
 }
 
 
