@@ -104,6 +104,7 @@ int play_game(){
   for(i=0;i<player;i++){
       tab[i] = create_player(character_tab);
   }
+  printf("debug");
   Space board[7][7];
   create_board(board);
   winner = game(player,tab,board);
