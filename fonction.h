@@ -240,7 +240,7 @@ void portal(Player user,Space board[7][7]){
     user.indice_x = x;
     user.indice_y = y;
     show_board(board);
-    return space_effect(x,y,user,board);
+    return space_effect(board[y][x],user,board);
 }
 
 
