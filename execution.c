@@ -104,7 +104,7 @@ int play_game(){
       tab[i] = create_player(character_tab);
   }
   printf("Rentrer dans create board\n");
-  Space **board==NULL;
+  Space **board=NULL;
   board = create_board();
   if(board==NULL){
     printf("erreur création board");
