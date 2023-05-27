@@ -6,6 +6,7 @@
 int game(int nb_j,Player *tab_j,Space board[7][7]){
   int winner=0;
   int bx , by; //pos de base des joueurs
+  int xt,yt; //pos temporaire des joueurs dans le labyrinthe
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
       by = tab_j[i].indice_y; 
@@ -13,7 +14,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
       show_board(board);
       int alive = 1;
       int blocked = 0;
-      printf("au tour de %s\n",tab_j[i].name);
+      printf("c'est au tour de %s\n",tab_j[i].name);    
       double time_spent = 0.0; // pour stocker le temps d'exécution du code
       clock_t begin = clock();
       while((alive==1 && blocked == 0)&&(winner == 0)){
@@ -21,7 +22,6 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
         int destination;
         tab_j[i].weapon = weapon_choice(tab_j[i]);  //choix de l'arme
         destination = movement();   //fct de mouvement du joueur
-        int xt,yt;
         if(destination==2){
           xt=tab_j[i].indice_x-1;
           yt = tab_j[i].indice_y;
@@ -39,7 +39,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
           yt = tab_j[i].indice_y;
         }
         if(xt==0 || yt == 0 || xt==6 || yt==6){
-            printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)");
+            printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)\n");
             alive = 0;
         }
         else{
@@ -54,7 +54,8 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
       clock_t end = clock(); // calcule le temps écoulé en trouvant la différence (end - begin) et
                              // divisant la différence par CLOCKS_PER_SEC pour convertir en secondes
       time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
-      printf("Tle temps écoulé pour le tour est de %f secondes", time_spent);
+      printf("vous avez péris dans le labyrinthe, passage au héros suivant\n");
+      printf("le temps écoulé pour le tour est de %f secondes\n", time_spent);
       if((alive==0)&&(winner =! 0)){ //verification de si le joueurs à reussi à gagner en étant mort
         winner=0;
       }
