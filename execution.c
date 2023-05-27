@@ -94,7 +94,7 @@ int play_game(){
         printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
         player = type_int();
     }
-    Player tab[player]
+    Player tab[player];
     int i;
     for(i=0;i<player-1;i++){
         tab[i] = create_player(character_tab);
