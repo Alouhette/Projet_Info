@@ -49,7 +49,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                     show_board(board);
                     alive = space_effect(board[tab_j[i].indice_y][tab_j[i].indice_x], tab_j[i],board);    //effet de la case de destination
                     winner = victory(tab_j[i],i);  
-                    blocked = other_space(board,tab_j[i].indice_y,tab_j[i].indice_x];//verif si le joueur peut bouger 
+                    blocked = other_space(board,tab_j[i].indice_y,tab_j[i].indice_x);//verif si le joueur peut bouger 
                 }       
             }
             clock_t end = clock(); // calcule le temps écoulé en trouvant la différence (end - begin) et
