@@ -7,7 +7,7 @@ int forbidden_space(Space board[7][7], int x, int y ){
 }
 
 void adapt_indice(Space board[7][7],int *x,int *y){
-    while(forbidden_space(board,*x,*y){
+    while(forbidden_space(board,*x,*y)){
         if(*x<5){
             *x++;
         }
