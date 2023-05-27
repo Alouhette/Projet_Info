@@ -6,7 +6,7 @@
 int game(int nb_j,Player *tab_j,Space board[7][7]){
     int winner=0;
     int bx , by; //pos de base des joueurs
-    int xt,yt; //pos temporaire des joueurs dans le labyrinthe
+    int xt , yt; //pos temporaire des joueurs dans le labyrinthe
     while(winner == 0){
         for(int i=0;i<nb_j;i++){
             by = tab_j[i].indice_y; 
@@ -23,19 +23,19 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                 tab_j[i].weapon = weapon_choice(tab_j[i]);  //choix de l'arme
                 destination = movement();   //fct de mouvement du joueur
                 if(destination==2){
-                    xt=tab_j[i].indice_x-1;
+                    xt = tab_j[i].indice_x-1;
                     yt = tab_j[i].indice_y;
                 }
                 if(destination==4){
-                    yt=tab_j[i].indice_y-1;
+                    yt = tab_j[i].indice_y-1;
                     xt = tab_j[i].indice_x;
                 }
                 if(destination==6){
-                    yt=tab_j[i].indice_y+1;
+                    yt =t ab_j[i].indice_y+1;
                     xt = tab_j[i].indice_x;
                 }
                 if(destination==8){
-                    xt=tab_j[i].indice_x+1;
+                    xt = tab_j[i].indice_x+1;
                     yt = tab_j[i].indice_y;
                 }
                 if(xt<=0 || yt <= 0 || xt>=6 || yt>=6){
