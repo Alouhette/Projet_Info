@@ -102,9 +102,7 @@ int play_game(){
   }
   int i;
   for(i=0;i<player;i++){
-      printf("debug1");
       tab[i] = create_player(character_tab);
-      printf("debug2");
   }
   Space board[7][7];
   create_board(board);
