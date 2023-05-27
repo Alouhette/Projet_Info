@@ -31,7 +31,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                     xt = tab_j[i].indice_x;
                 }
                 if(destination==6){
-                    yt =t ab_j[i].indice_y+1;
+                    yt = tab_j[i].indice_y+1;
                     xt = tab_j[i].indice_x;
                 }
                 if(destination==8){
