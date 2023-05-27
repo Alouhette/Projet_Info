@@ -1,4 +1,3 @@
-
 int forbidden_space(Space board[7][7], int x, int y ){ 
     if(board[y][x].treasure !=0 &&  board[y][x].monster!=0 && board[y][x].relic!=0){
         return 1;   
@@ -21,9 +20,8 @@ void adapt_indice(Space board[7][7],int *x,int *y){
     }
 }
 
-Space **create_board(){
+void create_board(Space board[7][7]){
     int i,j;
-    Space board[7][7];
     printf("debug0");
     for(i=1;i<6;i++){
         for(j=1;j<6;j++){
@@ -70,7 +68,6 @@ Space **create_board(){
        adapt_indice(board,x,y);
        board[*y][*x].relic=i;
     }
-    return board;
 }
 
 //int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
