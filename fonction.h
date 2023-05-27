@@ -23,6 +23,7 @@ void adapt_indice(Space board[7][7],int *x,int *y){
 
 void create_board(Space board[7][7]){
     int i,j;
+    printf("debug0");
     for(i=1;i<6;i++){
         for(j=1;j<6;j++){
             //creer les elem case (caché et sans monstre tresor et arme)
