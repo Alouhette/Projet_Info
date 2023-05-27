@@ -85,7 +85,7 @@ Player create_player(int *character_available){
                 character_available[0] = 0;
                 user.character = 'm';
                 user.relic = 0;
-                user.weapon = '?';
+                user.weapon = 0;
                 user.indice_x = 0;
                 user.indice_y = 2;
                 return user;
@@ -100,7 +100,7 @@ Player create_player(int *character_available){
                 character_available[1] = 0;
                 user.character = 'g';
                 user.relic = 0;
-                user.weapon = '?';
+                user.weapon = 0;
                 user.indice_x = 2;
                 user.indice_y = 6;
                 return user;
@@ -115,7 +115,7 @@ Player create_player(int *character_available){
                 character_available[2] = 0;
                 user.character = 'r';
                 user.relic = 0;
-                user.weapon = '?';
+                user.weapon = 0;
                 user.indice_x = 4;
                 user.indice_y = 0;
                 return user;
@@ -130,7 +130,7 @@ Player create_player(int *character_available){
                 character_available[3] = 0;
                 user.character = 'v';
                 user.relic = 0;
-                user.weapon = '?';
+                user.weapon = 0;
                 user.indice_x = 6;
                 user.indice_y = 4;
                 return user;
