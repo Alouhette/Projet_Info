@@ -64,7 +64,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
             if((alive==0)&&(winner != 0)){ //verification de si le joueurs à reussi à gagner en étant mort
                 winner=0;
             }
-            printf("le labyrinthe ce referme");
+            printf("le labyrinthe ce referme\n");
             for(int j=0;j<6;j++){ //on recache toutes les cases
                 for(int h=0;h<6;h++){
                     board[j][h].hidden = 1;
