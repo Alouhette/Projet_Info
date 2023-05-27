@@ -57,7 +57,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
       time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
       printf("vous avez péris dans le labyrinthe, passage au héros suivant\n");
       printf("le temps écoulé pour le tour est de %f secondes\n", time_spent);
-      if((alive==0)&&(winner =! 0)){ //verification de si le joueurs à reussi à gagner en étant mort
+      if((alive==0)&&(winner != 0)){ //verification de si le joueurs à reussi à gagner en étant mort
         winner=0;
       }
       tab_j[i].indice_x=bx;
