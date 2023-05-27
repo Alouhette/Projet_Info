@@ -104,12 +104,8 @@ int play_game(){
       tab[i] = create_player(character_tab);
   }
   printf("Rentrer dans create board\n");
-  Space **board=NULL;
-  board = create_board();
-  if(board==NULL){
-    printf("erreur création board");
-    exit(10);
-  }
+  Space board[7][7];
+  create_board(board);
   printf("Sortir de create board\n");
   winner = game(player,tab,board);
   //ajouter 1 au nbr victoires de winner
