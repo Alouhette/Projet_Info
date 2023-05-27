@@ -98,8 +98,9 @@ int play_game(){
   if(tab==NULL){
     printf("erreur malloc");
     exit(10);
-  } 
-  for(int i=0;i<player;i++){
+  }
+  int i;
+  for(i=0;i<player;i++){
       tab[i] = create_player(character_tab);
       printf("debuga");
   }
