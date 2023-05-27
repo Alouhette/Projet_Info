@@ -89,7 +89,7 @@ int play_game(){
     printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
     printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
     printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
-    player = type_int();
+    player = 2;
     while(player < 2 || player > 4){
         printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
         player = type_int();
