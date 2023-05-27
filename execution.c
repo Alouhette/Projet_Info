@@ -102,10 +102,11 @@ int play_game(){
   int i;
   for(i=0;i<player;i++){
       tab[i] = create_player(character_tab);
-      printf("debug boucle persos : %d\n",i);
   }
   Space board[7][7];
+  printf("Rentrer dans create board\n");
   create_board(board);
+  printf("Sortir de create board\n");
   winner = game(player,tab,board);
   //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
