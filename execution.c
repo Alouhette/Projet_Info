@@ -84,44 +84,43 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
 }
 
 int play_game(){
-  int player,winner;
-  int character_tab[4]={1,1,1,1};
-  printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
-  printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
-  printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
-  player = type_int();
-  while(player < 2 || player > 4){
-    printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
+    int player,winner;
+    int character_tab[4]={1,1,1,1};
+    printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
+    printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
+    printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
     player = type_int();
-  }
-  Player *tab=NULL;
-  tab = malloc(player*sizeof(Player));
-  if(tab==NULL){
-    printf("erreur malloc");
-    exit(10);
-  }
-  int i;
-  for(i=0;i<player;i++){
-      tab[i] = create_player(character_tab);
-  }
-  Space board[7][7];
-  create_board(board);
-  winner = game(player,tab,board);
-  //ajouter 1 au nbr victoires de winner
-  printf("voulez vous rejouer ? (1=oui , 0=non) \n");
-  int choice;
-  choice = type_int();
-   while(choice < 0 || choice > 1){
-    printf("Saisie incorrecte, réessayez.\n");
+    while(player < 2 || player > 4){
+        printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
+        player = type_int();
+    }
+    Player *tab=NULL;
+    tab = malloc(player*sizeof(Player));
+    if(tab==NULL){
+        printf("erreur malloc");
+        exit(10);
+    }
+    int i;
+    for(i=0;i<player;i++){
+        tab[i] = create_player(character_tab);
+    }
+    Space board[7][7];
+    create_board(board);
+    winner = game(player,tab,board);
+    //ajouter 1 au nbr victoires de winner
+    printf("voulez vous rejouer ? (1=oui , 0=non) \n");
+    int choice;
     choice = type_int();
-  }
-  
-  if(choice){
-    play_game();
-  }
-  else{
-    printf("merci d'avoir joué");
-  }
+    while(choice < 0 || choice > 1){
+        printf("Saisie incorrecte, réessayez.\n");
+        choice = type_int();
+    }  
+    if(choice){
+        play_game();
+    }
+    else{
+        printf("merci d'avoir joué");
+    }
 }
 
 int main(){
