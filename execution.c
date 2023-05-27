@@ -88,8 +88,6 @@ int play_game(){
     printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
     printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
     int player,winner;
-    int character_tab[4]={1,1,1,1};
-    player = 2;
     /*
     player = type_int();
     while(player < 2 || player > 4){
@@ -97,6 +95,8 @@ int play_game(){
         player = type_int();
     }
     */
+    int player = 2;
+    int character_tab[4]={1,1,1,1};
     Player tab[player];
     int i;
     for(i=0;i<player;i++){
