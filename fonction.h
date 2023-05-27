@@ -50,7 +50,7 @@ void create_board(Space board[7][7]){
             x=1 + rand()%5;
             y=1 + rand()%5;
             adapt_indice(board,&x,&y);
-            board[y][x].monster=i; 
+            board[y][x].monster=j; 
         }
     }
     for(j=1 ; j<5 ; j++){
