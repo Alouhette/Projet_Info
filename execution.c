@@ -101,7 +101,7 @@ int play_game(){
         exit(10);
     }
     int i;
-    for(i=0;i<player;i++){
+    for(i=0;i<player-1;i++){
         tab[i] = create_player(character_tab);
     }
     Space board[7][7];
