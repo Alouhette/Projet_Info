@@ -93,7 +93,7 @@ int play_game(){
     printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
     player = type_int();
   }
-  printf("%d",&player);
+  printf("%d",player);
   Player *tab;
   tab = malloc(player*sizeof(Player));
   for(int i=0;i<player;i++){
