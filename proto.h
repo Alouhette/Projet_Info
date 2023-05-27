@@ -23,3 +23,19 @@ void show_symbol(Space x);
 int victory(Player j,int num_j);
 int other_Space(Space board[7][7],int x,int y);
 
+
+void show_board(Space board[7][7]){
+    for (int i=1;i<6;i++){
+        for (int j=1;j<6;j++){
+            if (board[j][i].hidden == 1){
+                printf(" ▦ "); //La case est cachée
+            }
+            else{
+                show_symbol(board[j][i]); //La case n'est pas cachée
+            }
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
