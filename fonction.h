@@ -226,8 +226,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
     }
 }
 
-
-void portal(Player user,Space board[7][7]){
+int portal(Player user,Space board[7][7]){
     int x;
     int y;
     printf("Vous venez de trouver un portail de téléportation ! Veuillez choisir sur quelle case non visité vous rendre.\n");
