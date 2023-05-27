@@ -297,6 +297,7 @@ int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si 
     }
     else if (x.treasure==1){
         user.treasure = 1;
+        return 1;
     }
     else if(x.totem==1){
         transmutation(user,game_board);
