@@ -74,8 +74,8 @@ void show_symbol(Space x){
 }
 
 void show_board(Space board[7][7]){
-    for (int i=0;i<6;i++){
-        for (int j=0;j<6;j++){
+    for (int i=0;i<7;i++){
+        for (int j=0;j<7;j++){
             if ((j==4&&i==0)||(j==0&&i==2)||(j==6&&i==4)||(j==2&&i==6)){
                 printf(" D ");
             }
