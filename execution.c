@@ -41,10 +41,6 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                 if(xt<=0 || yt <= 0 || xt>=6 || yt>=6){
                     printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)\n");
                     alive = 0;
-                    tab_j[i].indice_x=bx;
-                    tab_j[i].indice_y=by;  
-                    tab_j[i].relic = 0;
-                    tab_j[i].treasure =0;
                 }
                 else{
                     tab_j[i].indice_x=xt; 
@@ -61,6 +57,10 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
             time_spent += (double)(end - begin) / CLOCKS_PER_SEC; 
             printf("vous avez péris dans le labyrinthe, passage au héros suivant\n");
             printf("le temps écoulé pour le tour est de %f secondes\n", time_spent);
+            tab_j[i].indice_x=bx;
+            tab_j[i].indice_y=by;  
+            tab_j[i].relic = 0;
+            tab_j[i].treasure =0;
             if((alive==0)&&(winner != 0)){ //verification de si le joueurs à reussi à gagner en étant mort
                 winner=0;
             }
