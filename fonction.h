@@ -35,41 +35,34 @@ void create_board(Space board[7][7]){
             board[j][i] = tile;            
         }
     }
-    int *x, *y;    //variable des position aléatoire
-    *x=1 + rand()%5;
-    *y=1 + rand()%5;
-    board[*y][*x].treasure=1; //pas besoin de vérifier 1er case remplie car tout est dispo
+    int x, y;    //variable des position aléatoire
+    x=1 + rand()%5;
+    y=1 + rand()%5;
+    board[y][x].treasure=1; //pas besoin de vérifier 1er case remplie car tout est dispo
     printf("debug1");
-    *x=1 + rand()%5;
-    *y=1 + rand()%5;
-    adapt_indice(board,x,y); //adaptation des indices pour obtenir une position correcte
-    board[*y][*x].portal=1;  //remplissage de la case 
+    x=1 + rand()%5;
+    y=1 + rand()%5;
+    adapt_indice(board,&x,&y); //adaptation des indices pour obtenir une position correcte
+    board[y][x].portal=1;  //remplissage de la case 
     printf("debug2");
     //et on répéte le procédé pour chaque case.
-    *x=1 + rand()%5;
-    *y=1 + rand()%5;
+    x=1 + rand()%5;
+    y=1 + rand()%5;
     for (i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
-            adapt_indice(board,x,y);
-            board[*y][*x].monster=i; 
+            adapt_indice(board,&x,&y);
+            board[y][x].monster=i; 
         }
     }
     printf("debug3");
-    for(i=1 ; i<3 ; j++){
-       *x=1 + rand()%5;
-       *y=1 + rand()%5;
-       adapt_indice(board,x,y);
-       board[*y][*x].totem=1;
+    for(i=1 ; i<3 ; i++){
+       x=1 + rand()%5;
+       y=1 + rand()%5;
+       adapt_indice(board,&x,&y);
+       board[y][x].totem=1;
     }
     printf("debug4");
-    for(i=1 ; i<5 ; j++){
-       *x=1 + rand()%5;
-       *y=1 + rand()%5;
-       adapt_indice(board,x,y);
-       board[*y][*x].relic=i;
-    }
 }
-
 //int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
 Player create_player(int *character_available){
     int character_chosen;
