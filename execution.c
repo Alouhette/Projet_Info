@@ -63,6 +63,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
       tab_j[i].indice_y=by;  
       tab_j[i].relic = 0;
       tab_j[i].treasure =0;
+      printf("le labyrinthe ce referme");
       for(int j=0;j<6;j++){ //on recache toutes les cases
         for(int h=0;h<6;h++){
           board[j][h].hidden = 1;
