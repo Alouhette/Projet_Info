@@ -96,7 +96,7 @@ int play_game(){
     }
     Player tab[player];
     int i;
-    for(i=0;i<player-1;i++){
+    for(i=0;i<player;i++){
         tab[i] = create_player(character_tab);
     }
     printf("entrée create board");
