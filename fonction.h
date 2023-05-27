@@ -7,7 +7,7 @@ int forbidden_space(Space board[7][7], int x, int y ){
 }
 
 void adapt_indice(Space board[7][7],int *x,int *y){
-    while(forbidden_space(board),*x,*y){
+    while(forbidden_space(board,*x,*y){
         if(*x<5){
             *x++;
         }
@@ -49,7 +49,7 @@ void create_board(Space board[7][7]){
     for (i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
             adapt_indice(board,x,y);
-            board[y][x].monster=i; 
+            board[*y][*x].monster=i; 
         }
     }
     for(i=1 ; i<3 ; j++){
