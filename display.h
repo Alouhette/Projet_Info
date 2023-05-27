@@ -77,7 +77,7 @@ void show_board(Space board[7][7]){
     for (int i=0;i<7;i++){
         for (int j=0;j<7;j++){
             if (j==4&&i==0){
-               printf(ANSI_COLOR_GREEN   "d"   ANSI_COLOR_RESET);
+               printf(ANSI_COLOR_GREEN   " d "   ANSI_COLOR_RESET);
             }
             else if (j==0&&i==2){
                printf(ANSI_COLOR_BLUE " d " ANSI_COLOR_RESET);
