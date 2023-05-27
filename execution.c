@@ -105,9 +105,7 @@ int play_game(){
       tab[i] = create_player(character_tab);
   }
   Space board[7][7];
-  printf("le code passe pas create");
   create_board(board);
-  printf("le code passe create");
   winner = game(player,tab,board);
   //ajouter 1 au nbr victoires de winner
   printf("voulez vous rejouer ? (1=oui , 0=non) \n");
