@@ -5,8 +5,11 @@
 
 int game(int nb_j,Player *tab_j,Space board[7][7]){
   int winner=0;
+  int bx , by; //pos de base des joueurs
   while(winner == 0){
     for(int i=0;i<nb_j;i++){
+      by = tab_j[i].indice_y; 
+      bx = tab_j[i].indice_x; 
       show_board(board);
       int alive = 1;
       int blocked = 0;
@@ -36,7 +39,12 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
           yt = tab_j[i].indice_y;
         }
         if(xt==0 || yt == 0 || xt==6 || yt==6){
+            printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)");
             alive = 0;
+        }
+        else{
+            tab_j[i].indice_x=xt; 
+            tab_j[i].indice_y=yt; 
         }
         show_board(board);
         alive = space_effect(board[tab_j[i].indice_x][tab_j[i].indice_y], tab_j[i],board);    //effet de la case de destination
@@ -50,6 +58,8 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
       if((alive==0)&&(winner =! 0)){ //verification de si le joueurs à reussi à gagner en étant mort
         winner=0;
       }
+      tab_j[i].indice_x=bx;
+      tab_j[i].indice_y=by;  
       tab_j[i].relic = 0;
       tab_j[i].treasure =0;
       for(int j=0;j<6;j++){ //on recache toutes les cases
