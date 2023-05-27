@@ -304,8 +304,7 @@ int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si 
         return 0;
     }
     else if(x.portal==1){
-        portal(user);
-        return 1;
+        return portal(user);
     }
     else{
         printf("Erreur avec space_effect.\n");
