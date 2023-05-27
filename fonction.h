@@ -1,3 +1,11 @@
+
+int forbidden_space(Space board[7][7], int x, int y ){ 
+    if(board[x][y].treasure !=0 &&  board[x][y].monster!=0 && board[x][y].relic!=0){
+        return 1;   
+    };
+    return 0;   
+}
+
 void adapt_indice(Space board[7][7],int *x,int *y){
     while(forbidden_space(board),*x,*y){
         if(*x<5){
@@ -13,13 +21,6 @@ void adapt_indice(Space board[7][7],int *x,int *y){
     }
 }
 
-
-int forbidden_space(Space board[7][7], int x, int y ){ 
-    if(board[x][y].treasure !=0 &&  board[x][y].monster!=0 && board[x][y].relic!=0){
-        return 1;   
-    };
-    return 0;   
-}
 void create_board(Space board[7][7]){
     int i=0,j=0;
     for(i;i<6;i++){
