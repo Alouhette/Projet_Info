@@ -307,7 +307,7 @@ int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si 
 
 
 int victory(Player j,int num_j){
-    if(j.treasure == 1 && j.relic == 1){
+    if((j.treasure == 1) && (j.relic == 1)){
         return num_j+1;
     }
     else{
