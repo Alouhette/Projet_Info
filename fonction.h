@@ -21,7 +21,7 @@ void adapt_indice(Space board[7][7],int *x,int *y){
     }
 }
 
-void create_board(){
+Space create_board(){
     int i,j;
     Space board[7][7];
     printf("debug0");
