@@ -94,8 +94,7 @@ int play_game(){
         printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
         player = type_int();
     }
-    Player *tab;
-    tab = malloc(player*sizeof(Player));
+    Player tab[player]
     if(tab==NULL){
         printf("erreur malloc");
         exit(10);
@@ -104,8 +103,10 @@ int play_game(){
     for(i=0;i<player-1;i++){
         tab[i] = create_player(character_tab);
     }
+    printf("entrée create board");
     Space board[7][7];
     create_board(board);
+    printf("fin create board");
     winner = game(player,tab,board);
     //ajouter 1 au nbr victoires de winner
     printf("voulez vous rejouer ? (1=oui , 0=non) \n");
