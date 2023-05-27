@@ -227,7 +227,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
 }
 
 
-void portal(Player user){
+void portal(Player user,Space board[7][7]){
     int x;
     int y;
     printf("Vous venez de trouver un portail de téléportation ! Veuillez choisir sur quelle case non visité vous rendre.\n");
@@ -236,9 +236,11 @@ void portal(Player user){
     x = type_coord();
     printf("Sur quelle colonne souhaite-vous vous rendre : ");
     y = type_coord();
-    
+    board[y][x].hidden =0;
     user.indice_x = x;
     user.indice_y = y;
+    show_board(board);
+    return space_effect(x,y,user,board);
 }
 
 
@@ -304,7 +306,7 @@ int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si 
         return 0;
     }
     else if(x.portal==1){
-        return portal(user);
+        return portal(user, game_board);
     }
     else{
         printf("Erreur avec space_effect.\n");
