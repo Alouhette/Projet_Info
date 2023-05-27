@@ -218,7 +218,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
     }
 }
 
-int portal(Player user,Space board[7][7]){
+void portal(Player user,Space board[7][7]){
     int x;
     int y;
     printf("Vous venez de trouver un portail de téléportation ! Veuillez choisir sur quelle case non visité vous rendre.\n");
@@ -234,7 +234,7 @@ int portal(Player user,Space board[7][7]){
 }
 
 
-int transmutation(Player user, Space game_board[7][7]){ 
+void transmutation(Player user, Space game_board[7][7]){ 
     //Fini le tour du joueur ! (à mettre juste avant l'appel de cette fonction)
     int x;
     int y;
