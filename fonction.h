@@ -70,6 +70,7 @@ void create_board(){
        adapt_indice(board,x,y);
        board[*y][*x].relic=i;
     }
+    return board;
 }
 
 //int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
