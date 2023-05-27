@@ -1,5 +1,5 @@
 int forbidden_space(Space board[7][7], int x, int y ){ 
-    if(board[y][x].treasure !=0 || board[y][x].monster !=0 || board[y][x].relic !=0 || board[y][x].totem !=0 || board[y][x].portal  !=0){
+    if(board[y][x].treasure != 0 || board[y][x].monster != 0 || board[y][x].relic != 0 || board[y][x].totem != 0 || board[y][x].portal  != 0){
         return 1;   
     };
     return 0;   
