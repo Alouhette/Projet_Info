@@ -126,6 +126,7 @@ int play_game(){
 }
 
 int main(){
+  srand(time(NULL));
   title();
   int choice;
   choice = type_int();
