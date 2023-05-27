@@ -74,7 +74,7 @@ Player create_player(int *character_available){
     scanf("%s",user.name);
     printf("Veuillez choisir le personnage que vous voulez jouer parmi les suivants :\n");
     show_availability(character_available);
-    scanf("%d",character_chosen);
+    character_chosen = type_int();
     switch(character_chosen){
         case 1:
             if (character_available[0] == 0){
