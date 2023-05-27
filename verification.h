@@ -18,7 +18,6 @@ int type_coord(){
   int verif;
   do{
     verif = scanf("%d",&n1);
-    printf("%d,%d",n1,verif);
     clear_buffer();
   }while(n1>5 || n1<1 || verif!=1); //Pour des saisies entre 1 et 5
 return n1;
