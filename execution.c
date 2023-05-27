@@ -26,15 +26,15 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                     xt = tab_j[i].indice_x;
                     yt = tab_j[i].indice_y-1;
                 }
-                else if(destination==4){
+                if(destination==4){
                     yt = tab_j[i].indice_y;
                     xt = tab_j[i].indice_x-1;
                 }
-                else if(destination==6){
+                if(destination==6){
                     yt = tab_j[i].indice_y;
                     xt = tab_j[i].indice_x+1;
                 }
-                else if(destination==8){
+                if(destination==8){
                     xt = tab_j[i].indice_x;
                     yt = tab_j[i].indice_y+1;
                 };
@@ -50,7 +50,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                     alive = space_effect(board[tab_j[i].indice_y][tab_j[i].indice_x], tab_j[i],board);    //effet de la case de destination
                     winner = victory(tab_j[i],i);  
                     blocked = other_space(board,tab_j[i].indice_y,tab_j[i].indice_x);//verif si le joueur peut bouger 
-                };       
+                }      
             }
             clock_t end = clock(); // calcule le temps écoulé en trouvant la différence (end - begin) et
                              // divisant la différence par CLOCKS_PER_SEC pour convertir en secondes
