@@ -11,7 +11,7 @@ typedef struct{
 typedef struct{
     char name[100];
     char character; //perso choisi
-    char weapon; //arme equipe pour ce tour
+    int weapon; //arme equipe pour ce tour
     int relic; //1 si relique obtenu, 0 sinon
     int treasure; // si 1 tresor obtenu , 0 sinon
     int indice_x; 
