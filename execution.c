@@ -94,8 +94,7 @@ int play_game(){
         printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
         player = type_int();
     }
-    Player *tab=NULL;
-    tab = malloc(player*sizeof(Player));
+    Player tab[player];
     if(tab==NULL){
         printf("erreur malloc");
         exit(10);
