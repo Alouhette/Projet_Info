@@ -28,13 +28,13 @@ void show_symbol(Space x){
               printf(ANSI_COLOR_RED " z "ANSI_COLOR_RESET); //zombie
               break;
           case 2 :
-              printf((ANSI_COLOR_RED " b "ANSI_COLOR_RESET);//basilic
+              printf(ANSI_COLOR_RED " b "ANSI_COLOR_RESET);//basilic
               break;
           case 3 :
-              printf((ANSI_COLOR_RED " b "ANSI_COLOR_RESET);//troll
+              printf(ANSI_COLOR_RED " b "ANSI_COLOR_RESET);//troll
               break;
           case 4 :
-              printf((ANSI_COLOR_RED " h "ANSI_COLOR_RESET);//harpie
+              printf(ANSI_COLOR_RED " h "ANSI_COLOR_RESET);//harpie
               break;
        }
     }
