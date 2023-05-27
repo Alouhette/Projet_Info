@@ -1,3 +1,19 @@
+void adapt_indice(Space board[7][7],int *x,int *y){
+    while(forbidden_space(board),*x,*y){
+        if(*x<5){
+            *x++;
+        }
+        else{
+            *x=1;
+            *y++;
+        }
+        if(*y>5){
+            y=1;
+        }
+    }
+}
+
+
 int forbidden_space(Space board[7][7], int x, int y ){ 
     if(board[x][y].treasure !=0 &&  board[x][y].monster!=0 && board[x][y].relic!=0){
         return 1;   
