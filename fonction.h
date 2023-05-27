@@ -10,11 +10,11 @@ void adapt_indice(Space board[7][7],int *x,int *y){
         if(*x<5){
             *x++;
         }
-        if(*x=5){
+        if(*x==5){
             *x=1;
             *y++;
         }
-        if(*y>5){
+        if(*y<5){
             *y=1;
         };
     }
@@ -34,17 +34,14 @@ void create_board(Space board[7][7]){
             board[j][i] = tile;            
         }
     }
-    printf("debug1");
     int x, y;    //variable des position aléatoire
     x=1 + rand()%5;
     y=1 + rand()%5;
     board[y][x].treasure=1; //pas besoin de vérifier 1er case remplie car tout est dispo
-    printf("debug2");
     x=1 + rand()%5;
     y=1 + rand()%5;
     adapt_indice(board,&x,&y); //adaptation des indices pour obtenir une position correcte
     board[y][x].portal=1;  //remplissage de la case 
-    printf("debug3");
     //et on répéte le procédé pour chaque case.
     x=1 + rand()%5;
     y=1 + rand()%5;
@@ -56,21 +53,18 @@ void create_board(Space board[7][7]){
             board[y][x].monster=i; 
         }
     }
-    printf("debug4");
     for(j=1 ; j<5 ; j++){
         x=1 + rand()%5;
         y=1 + rand()%5;
         adapt_indice(board,&x,&y);
         board[y][x].relic=j; 
     }
-    printf("debug5");
     for(i=1 ; i<3 ; i++){
        x=1 + rand()%5;
        y=1 + rand()%5;
        adapt_indice(board,&x,&y);
        board[y][x].totem=1;
     }
-    printf("debug6");
 }
 //int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
 Player create_player(int *character_available){
