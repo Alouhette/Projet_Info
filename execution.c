@@ -102,7 +102,7 @@ int play_game(){
   int i;
   for(i=0;i<player;i++){
       tab[i] = create_player(character_tab);
-      printf("debuga");
+      printf("debug boucle persos : %d\n",i);
   }
   Space board[7][7];
   create_board(board);
