@@ -96,6 +96,7 @@ int play_game(){
   Player tab[player];
   for(int i=0;i<player;i++){
       tab[i] = create_player(character_tab);
+      printf("debuga");
   }
   Space board[7][7];
   create_board(board);
