@@ -85,7 +85,7 @@ void show_board(Space board[7][7]){
                 }
                 else{
                     if (board[j][i].hidden == 1){
-                        printf("%c",0x96); //La case est cachée
+                        printf("%c", '♦'); //La case est cachée
                     }
                     else{
                         show_symbol(board[j][i]);//La case n'est pas cachée
