@@ -41,28 +41,28 @@ void create_board(Space board[7][7]){
     board[*y][*x].treasure=1; //pas besoin de vérifier 1er case remplie car tout est dispo
     *x=1 + rand()%5;
     *y=1 + rand()%5;
-    adapt_indice(board,*x,*y); //adaptation des indices pour obtenir une position correcte
+    adapt_indice(board,x,y); //adaptation des indices pour obtenir une position correcte
     board[*y][*x].portal=1;  //remplissage de la case 
     //et on répéte le procédé pour chaque case.
     *x=1 + rand()%5;
     *y=1 + rand()%5;
     for (i=1; i<5;i++){
         for(j=1 ; j<5 ; j++){
-            adapt_indice(board,*x,*y);
+            adapt_indice(board,x,y);
             board[y][x].monster=i; 
         }
     }
     for(i=1 ; i<3 ; j++){
        *x=1 + rand()%5;
        *y=1 + rand()%5;
-       adapt_indice(board,*x,*y);
+       adapt_indice(board,x,y);
        board[*y][*x].totem=1;
     }
     
     for(i=1 ; i<5 ; j++){
        *x=1 + rand()%5;
        *y=1 + rand()%5;
-       adapt_indice(board,*x,*y);
+       adapt_indice(board,x,y);
        board[*y][*x].relic=i;
     }
 }
