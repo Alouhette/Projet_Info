@@ -31,7 +31,7 @@ void create_board(Space board[7][7]){
             tile.monster = 0;
             tile.relic = 0;
             tile.treasure = 0;
-            tile.clear =0;
+            tile.cleared =0;
             board[j][i] = tile;            
         }
     }
