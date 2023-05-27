@@ -24,7 +24,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                 destination = movement();   //fct de mouvement du joueur
                 if(destination==2){
                     xt = tab_j[i].indice_x;
-                    yt = tab_j[i].indice_y-1;
+                    yt = tab_j[i].indice_y+1;
                 }
                 if(destination==4){
                     yt = tab_j[i].indice_y;
@@ -36,7 +36,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                 }
                 if(destination==8){
                     xt = tab_j[i].indice_x;
-                    yt = tab_j[i].indice_y+1;
+                    yt = tab_j[i].indice_y-1;
                 };
                 if(xt<=0 || yt <= 0 || xt>=6 || yt>=6){
                     printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)\n");
