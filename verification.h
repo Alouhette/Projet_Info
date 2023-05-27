@@ -2,7 +2,6 @@ void clear_buffer(){
   while (getchar()!='\n'){
   }
 }
-
 int type_int(){
   int n1;
   int verif;
@@ -12,7 +11,6 @@ int type_int(){
   }while(n1>4 || n1<0 || verif!=1); //Pour des saisies entre 0 et 4
 return n1;
 }
-
 int type_coord(){
   int n1;
   int verif;
@@ -22,7 +20,6 @@ int type_coord(){
   }while(n1>5 || n1<1 || verif!=1); //Pour des saisies entre 1 et 5
 return n1;
 }
-
 int type_dest(){
   int n1;
   int verif;
