@@ -75,14 +75,25 @@ void show_symbol(Space x){
 
 
 void show_board(Space board[7][7]){
-    for (int i=1;i<6;i++){
-        for (int j=1;j<6;j++){
-            if (board[j][i].hidden == 1){
-                printf(" ▦ "); //La case est cachée
+    void show_board(Space board[7][7]){
+    for (int i=0;i<6;i++){
+        for (int j=0;j<6;j++){
+            if ((j==4&&i==0)||(j==0&&i==2)||(j==6&&i==4)||(j==2&&i==6)){
+                printf(" D ");
             }
             else{
-                show_symbol(board[j][i]); //La case n'est pas cachée
-            }
+                if((j<1||j>5)||(i<1||i>5)){
+                    printf("   ");
+                }
+                else{
+                    if (board[j][i].hidden == 1){
+                        printf(" ▦ "); //La case est cachée
+                    }
+                    else{
+                        printf(" 🯶 ") //La case n'est pas cachée
+                    }
+                }
+            }                
         }
         printf("\n");
     }
