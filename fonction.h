@@ -257,22 +257,38 @@ void get_relic(Player user, Space on_case){
     switch(on_case.relic){
         case 1 :
             if (user.character == 'm'){
+                printf("Vous avez trouvé votre relique ! Vous l'avez donc récupéré pour ce tour.\n");
                 user.relic = 1;
+            }
+            else{
+                printf("Vous avez trouvé une relique, mais pas celle que vous recherchez, dommage !\n");
             }
             break;
         case 2 :
             if (user.character == 'g'){
+                printf("Vous avez trouvé votre relique ! Vous l'avez donc récupéré pour ce tour.\n");
                 user.relic = 1;
+            }
+            else{
+                printf("Vous avez trouvé une relique, mais pas celle que vous recherchez, dommage !\n");
             }
             break;
         case 3 :
             if (user.character == 'r'){
+                printf("Vous avez trouvé votre relique ! Vous l'avez donc récupéré pour ce tour.\n");
                 user.relic = 1;
+            }
+            else{
+                printf("Vous avez trouvé une relique, mais pas celle que vous recherchez, dommage !\n");
             }
             break;
         case 4 :
             if (user.character == 'v'){
+                printf("Vous avez trouvé votre relique ! Vous l'avez donc récupéré pour ce tour.\n");
                 user.relic = 1;
+            }
+            else{
+                printf("Vous avez trouvé une relique, mais pas celle que vous recherchez, dommage !\n");
             }
             break;
     } 
