@@ -53,6 +53,12 @@ void create_board(Space board[7][7]){
             board[y][x].monster=i; 
         }
     }
+    for(j=1 ; j<5 ; j++){
+        x=1 + rand()%5;
+        y=1 + rand()%5;
+        adapt_indice(board,&x,&y);
+        board[y][x].relic=j; 
+    
     for(i=1 ; i<3 ; i++){
        x=1 + rand()%5;
        y=1 + rand()%5;
