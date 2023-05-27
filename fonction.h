@@ -170,46 +170,46 @@ int movement(){
 int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
     switch(on_space.monster){
         case '1':
-            printf("vous tombez né à né avec un zombie\n");
+            printf("Vous tombez nez à nez avec un zombie...!\n");
             if (user.weapon != 1){
-                printf("ne vous étant pas équipé de la torche vous périssez\n");
+                printf("N'étant pas équipé de la torche vous périssez...\n");
                 return 0;
             }
             else{
-                printf("en ayant équipé le bonne outil vous terrassez de la créature\n");
+                printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
                 return 1;
             }
             break;
         case '2':
-            printf("vous tombez né à né avec un basilic\n");
+            printf("Vous tombez nez à nez avec un basilic...!\n");
             if (user.weapon != 2){
-                printf("ne vous étant pas équipé de le miroir vous périssez\n");
+                printf("N'étant pas équipé du miroir vous périssez...\n");
                 return 0;
             }
             else{
-                printf("en ayant équipé le bonne outil vous terrassez de la créature\n");
+                printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
                 return 1;
             }
             break;
         case '3':
-            printf("vous tombez né à né avec un troll\n");
+            printf("Vous tombez nez à nez avec un troll...!\n");
             if (user.weapon != 3){
-                printf("ne vous étant pas équipé de la hache vous périssez\n");
+                printf("N'étant pas équipé de la hache vous périssez...\n");
                 return 0;
             }
             else{
-                printf("en ayant équipé le bonne outil vous terrassez de la créature\n");
+                printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
                 return 1;
             }
             break;
         case '4':
-            printf("vous tombez né à né avec une harpie\n");
+            printf("Vous tombez nez à nez avec une harpie...!\n");
             if (user.weapon != 4){
-                printf("ne vous étant pas équipé de l'arc vous périssez\n");
+                printf("N'étant pas équipé de l'arc vous périssez\n");
                 return 0;
             }
             else{
-                printf("en ayant équipé le bonne outil vous terrassez de la créature\n");
+                printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
                 return 1;
             }
             break;
