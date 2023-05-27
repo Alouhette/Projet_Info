@@ -14,7 +14,7 @@ void adapt_indice(Space board[7][7],int *x,int *y){
             *x=1;
             *y++;
         }
-        if(*y<5){
+        if(*y>5){
             *y=1;
         };
     }
