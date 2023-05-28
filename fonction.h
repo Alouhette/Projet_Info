@@ -253,7 +253,7 @@ void transmutation(Player user, Space game_board[7][7]){
     printf("Quelle est la colonne de la case à échanger : ");
     y = type_coord();
     //intervertir la case du totem avec la case choisie par l'utilisateur
-    while(xt<=0 || yt <= 0 || xt>=6 || yt>=6){
+    while(x<=0 || y <= 0 || x>=6 || y>=6){
                     printf("vous ne pouvez pas transmutter des cases inxexistantes\n");
                     printf("Quelle est la ligne de la case à échanger : ");
                     x = type_coord();
