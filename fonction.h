@@ -326,6 +326,10 @@ int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si 
     }
     else if(x.portal==1){
         portal(user, game_board);
+        if(user.indice_x<=0 || user.indice_y <= 0 || user.indice_x>=6 || user.indice_y>=6){
+                    printf("Après téléportation vous vous retrouvez dans les backrooms, (vous etes mort)\n");
+                    return 0;
+        }
         return space_effect(game_board[user.indice_y][user.indice_x],user,game_board);
     }
     else{
