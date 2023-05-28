@@ -1,29 +1,29 @@
-int forbidden_space(Space board[7][7], int x, int y ){ 
+int forbidden_space(Space board[7][7], int x, int y ){ //fonction qui communique si la case est déja attribué on non
     if(board[y][x].treasure != 0 || board[y][x].monster != 0 || board[y][x].relic != 0 || board[y][x].totem != 0 || board[y][x].portal  != 0){
         return 1;   
     };
     return 0;   
 }
 
-void adapt_indice(Space board[7][7], int *x, int *y) {
-    while (forbidden_space(board, *x, *y)) {
-        if ((*x) < 5) {
+void adapt_indice(Space board[7][7], int *x, int *y) { //fonction qui aide à bien attribuer les cases du donjon
+    while (forbidden_space(board, *x, *y)) { //si la case est deja remplir par une autre piece on doit modifier x et ou y
+        if ((*x) < 5) { //tout d'abord on essaie de décaler à gauche si possible 
             (*x)++;
-        } else if ((*x) == 5) {
+        } else if ((*x) == 5) { //sinon on remet tout à droite une ligne en dessous
             *x = 1;
             (*y)++;
         }
-        if ((*y) > 5) {
+        if ((*y) > 5) { //si on est trop bas on remonte
             *y = 1;
         }
     }
 }
 
-void create_board(Space board[7][7]){
+void create_board(Space board[7][7]){ //fonction de création du donjon (aidé par forbidden_space et adapt_indice)
     int i,j;
     for(i=1;i<6;i++){
         for(j=1;j<6;j++){
-            //creer les elem case (caché et sans monstre tresor et arme)
+            //creer les elem case (caché et sans monstre tresor et arme)(les cases de base)
             Space tile;
             tile.hidden = 1;
             tile.monster = 0;
@@ -34,31 +34,34 @@ void create_board(Space board[7][7]){
         }
     }
     int x, y;    //variable des position aléatoire
+    for(i=1 ; i<3 ; i++){ //deux treso donc boucle
+       x=1 + rand()%5; //randomize les position
+       y=1 + rand()%5;
+       adapt_indice(board,&x,&y);
+       board[y][x].treasure=1;
+    }
     x=1 + rand()%5;
     y=1 + rand()%5;
-    board[y][x].treasure=1; //pas besoin de vérifier 1er case remplie car tout est dispo
-    x=1 + rand()%5;
-    y=1 + rand()%5;
-    adapt_indice(board,&x,&y); //adaptation des indices pour obtenir une position correcte
+    adapt_indice(board,&x,&y); //adaptation des indices pour obtenir une position correcte (qui n'écrase pas une salle déja placé);
     board[y][x].portal=1;  //remplissage de la case 
     //et on répéte le procédé pour chaque case.
     x=1 + rand()%5;
     y=1 + rand()%5;
-    for(i=1; i<5;i++){
-        for(j=1 ; j<5 ; j++){
+    for(i=1; i<5;i++){ //boucle pour les différents monstres
+        for(j=1 ; j<5 ; j++){ 
             x=1 + rand()%5;
             y=1 + rand()%5;
             adapt_indice(board,&x,&y);
             board[y][x].monster=i; 
         }
     }
-    for(j=1 ; j<5 ; j++){
+    for(j=1 ; j<5 ; j++){ //4 relique donc boucle
         x=1 + rand()%5;
         y=1 + rand()%5;
         adapt_indice(board,&x,&y);
         board[y][x].relic=j; 
     }
-    for(i=1 ; i<3 ; i++){
+    for(i=1 ; i<3 ; i++){ //deux totem donc boucle
        x=1 + rand()%5;
        y=1 + rand()%5;
        adapt_indice(board,&x,&y);
