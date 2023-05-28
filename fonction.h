@@ -71,6 +71,9 @@ Player create_player(int *character_available){
     Player user;
     printf("veuillez choisir un nom : ");
     scanf("%s",user.name);
+    user.stats.space_number = 0;
+    user.stats.kill_count = 0;
+    user.stats.treasure_found = 0;
     printf("Veuillez choisir le personnage que vous voulez jouer parmi les suivants :\n");
     show_availability(character_available);
     character_chosen = type_int();
@@ -184,6 +187,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
+                user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -195,6 +199,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
+                user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -206,6 +211,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
+                user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -217,6 +223,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
+                user.stats.kill_count++;
                 return 1;
             }
             break;
