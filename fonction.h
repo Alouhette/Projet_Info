@@ -34,7 +34,7 @@ void create_board(Space board[7][7]){ //fonction de création du donjon (aidé p
         }
     }
     int x, y;    //variable des position aléatoire
-    for(i=1 ; i<3 ; i++){ //deux treso donc boucle
+    for(i=1 ; i<3 ; i++){ //deux tresor donc boucle
        x=1 + rand()%5; //randomize les position
        y=1 + rand()%5;
        adapt_indice(board,&x,&y);
@@ -68,25 +68,25 @@ void create_board(Space board[7][7]){ //fonction de création du donjon (aidé p
        board[y][x].totem=1;
     }
 }
-//int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
-Player create_player(int *character_available){
+Player create_player(int *character_available){ //création des perso des joueurs
     int character_chosen;
-    Player user;
+    Player user; //création de la val de retour
     printf("veuillez choisir un nom : ");
     scanf("%s",user.name);
-    user.stats.space_number = 0;
+    user.stats.space_number = 0; //mise en plac des scores
     user.stats.kill_count = 0;
     user.stats.treasure_found = 0;
     printf("Veuillez choisir le personnage que vous voulez jouer parmi les suivants :\n");
-    show_availability(character_available);
-    character_chosen = type_int();
+    show_availability(character_available); //montre les perso dispo
+    character_chosen = type_int(); //saisie du perso voulu
+    //int character_available[4] //indice 0 = mage, 1 = guerrier, 2 = ranger, 3 = voleur
     switch(character_chosen){
         case 1:
-            if (character_available[0] == 0){
+            if (character_available[0] == 0){ //perso deja pris
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
             }
-            else{
+            else{ //création du mage
                 character_available[0] = 0;
                 user.character = 'm';
                 user.relic = 0;
@@ -97,11 +97,11 @@ Player create_player(int *character_available){
             }
             break;
         case 2:
-            if (character_available[1] == 0){
+            if (character_available[1] == 0){ //perso deja pris
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
             }
-            else{
+            else{ //création du guerrier
                 character_available[1] = 0;
                 user.character = 'g';
                 user.relic = 0;
@@ -112,11 +112,11 @@ Player create_player(int *character_available){
             }
             break;
         case 3:
-            if (character_available[2] == 0){
+            if (character_available[2] == 0){ //perso deja pris
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
             }
-            else{
+            else{ //création du ranger
                 character_available[2] = 0;
                 user.character = 'r';
                 user.relic = 0;
@@ -127,11 +127,11 @@ Player create_player(int *character_available){
             }
             break;
         case 4:
-            if (character_available[3] == 0){
+            if (character_available[3] == 0){ //perso deja pris
                 printf("Personnage non disponible, veuillez en choisir un autre.\n");
                 return create_player(character_available);
             }
-            else{
+            else{ //création du voleur
                 character_available[3] = 0;
                 user.character = 'v';
                 user.relic = 0;
@@ -141,25 +141,25 @@ Player create_player(int *character_available){
                 return user;
             }
             break;
-        default :
+        default : //valeur incorrect recréation du perso
             printf("Saisie incorrecte, réessayez.\n");
             return create_player(character_available);
     }
 }
 
 
-int weapon_choice(){
+int weapon_choice(){ //choix des armes
    int weapon;
    printf("veuillez choisir une arme (numéro):\n");
    printf("1 - La Torche\n");
    printf("2 - Le miroir\n");
    printf("3 - La Hache\n");
    printf("4 - L'Arc\n");
-   scanf("%d",&weapon);
-   if((weapon > 0) && (weapon <5)){
+   scanf("%d",&weapon); //la personne vérifie l'arme qu'il veut prendre
+   if((weapon > 0) && (weapon <5)){ //verification si l'arme est valide
        return weapon;
    }
-   else{
+   else{ //si arme invalide on relance la fonction
        printf("Erreur lors de la séléction d'arme !");
        weapon = weapon_choice();
        return weapon;
