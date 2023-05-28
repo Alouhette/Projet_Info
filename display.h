@@ -1,4 +1,4 @@
-void title(){
+void title(){ //fonction affichant le titre du jeu
   printf("    __  ___         __          _     \n");
   printf("   /  |/  /_ _____ / /____ ____(_)__ _\n");
   printf("  / /__/ / // /_-</ __/ -_) __/ / _ `/\n");
@@ -8,7 +8,7 @@ void title(){
   printf("Press 2 to exit\n");
 }
 
-void tab_score(Player * tab, int nb_j){
+void tab_score(Player * tab, int nb_j){ //Fonction visant à afficher le score penant la partie
   printf("joueurs dans la partie:\n");
   for(int i=0;i<nb_j;i++){
       printf("%s : \n",tab[i].name);
@@ -19,7 +19,7 @@ void tab_score(Player * tab, int nb_j){
 }
   
 
-void show_symbol(Space x){
+void show_symbol(Space x){ //fonction qui vise à afficher les salles spécifique du donjon (quand notamment une case est visible)
   if (x.cleared == 0){
     if (x.monster != 0){
       //Quel monstre sera affiché
@@ -73,7 +73,7 @@ void show_symbol(Space x){
   }
 }
 
-void show_board(Space board[7][7]){
+void show_board(Space board[7][7]){ //fonction qui affiche le donjon
     for (int i=0;i<7;i++){
         for (int j=0;j<7;j++){
             if (j==4&&i==0){
@@ -106,7 +106,7 @@ void show_board(Space board[7][7]){
     }
 }
 
-void show_availability(int *character_available){
+void show_availability(int *character_available){ //sert à montrer quel perso sont disponibles
     if(character_available[0] == 1){
         printf("1 - Mage\n");
     }
