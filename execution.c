@@ -88,7 +88,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
     return winner-1;
 }
 
-int play_game(){
+int play_game(){ //initialise la partie
     int player,winner;
     int character_tab[4]={1,1,1,1}; //tab pour les perso dispo
     player = type_int();
@@ -120,7 +120,7 @@ int play_game(){
     }
 }
 
-int main(){
+int main(){ 
   srand(time(NULL));
   title(); //affichage du titre et menu de départ
   int choice; //choix de si vous voulez jouer ou non
@@ -138,7 +138,7 @@ int main(){
     const char* musiqueURL = "https://youtu.be/B7Uy-EWTEIA";  // Lien vers la vidéo de la musique
     const char* browser = "xdg-open";  // Commande pour ouvrir l'URL avec le navigateur par défaut sur Linux
     execlp(browser, browser, musiqueURL, NULL); // Lancement du navigateur avec l'URL de la musique
-    play_game();
+    play_game(); //lancement de l'initialisateur de partie
   }
   else if(choice == 2){
     printf("you decided to leave");
