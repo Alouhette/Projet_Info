@@ -357,11 +357,11 @@ int victory(Player j,int num_j){
 }
 
 int other_space(Space board[7][7],int x,int y){
-    if((board[x+1][y].hidden != 0) || (board[x-1][y].hidden != 0) || (board[x][y+1].hidden != 0) || (board[x][y-1].hidden != 0)){
-        return 0;
-    }
-    else{
+    if((board[x+1][y].hidden == 1) && (board[x-1][y].hidden == 1) && (board[x][y+1].hidden == 1) && (board[x][y-1].hidden == 1)){
         printf("toutes les cases adjacentes sont révélés vous ne pouvez plus vous déplacer, passage au joueur suivant");
         return 1;
+    }
+    else{
+        return 0;
     }
 }
