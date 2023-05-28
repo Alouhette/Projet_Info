@@ -30,16 +30,16 @@ void show_symbol(Space x){
       //Quel monstre sera affiché
       switch(x.monster){
           case 1 :
-              printf(" ☣ "); //zombie
+              printf(ANSI_COLOR_RED " ☣ "ANSI_COLOR_RESET); //zombie
               break;
           case 2 :
-              printf(" ♾ ");//basilic
+              printf(ANSI_COLOR_RED " ♾ "ANSI_COLOR_RESET);//basilic
               break;
           case 3 :
-              printf(" ⚉ ");//troll
+              printf(ANSI_COLOR_RED " ⚉ "ANSI_COLOR_RESET);//troll
               break;
           case 4 :
-              printf(" ⚚ ");//harpie
+              printf(ANSI_COLOR_RED " ⚚ "ANSI_COLOR_RESET);//harpie
               break;
        }
     }
@@ -47,30 +47,30 @@ void show_symbol(Space x){
       //Quelle relique sera affichéet
       switch(x.relic){
           case 1 :
-              printf(" 🕮 ");//grimoire
+              printf(ANSI_COLOR_BLUE    " 🕮 "    ANSI_COLOR_RESET );//grimoire
               break;
           case 2 :
-              printf(" ⚔ ");//épée
+              printf(ANSI_COLOR_YELLOW  " ⚔ "  ANSI_COLOR_RESET );//épée
               break;
           case 3 :
-              printf(" ∫ ");//baton
+              printf(ANSI_COLOR_GREEN   " ∫ "   ANSI_COLOR_RESET );//baton
               break;
           case 4 :
-              printf(" ↗ ");//dague
+              printf(ANSI_COLOR_MAGENTA " ↗ " ANSI_COLOR_RESET );//dague
               break;
       }
    }
    else if (x.treasure==1){
        //Afficher le trésor
-       printf(" ⌧ "); 
+       printf(ANSI_COLOR_YELLOW  " ⌧ "  ANSI_COLOR_RESET ); 
    }
    else if(x.totem==1){
        //Afficher le totem
-       printf(" ◮ ");
+       printf(ANSI_COLOR_YELLOW  " ◮ "  ANSI_COLOR_RESET );
    }
    else if(x.portal==1){
        //Afficher le portail
-       printf(" ֍ "); 
+       printf(ANSI_COLOR_CYAN    " ֍ "    ANSI_COLOR_RESET); 
    }
   }
   else{
@@ -81,8 +81,17 @@ void show_symbol(Space x){
 void show_board(Space board[7][7]){
     for (int i=0;i<7;i++){
         for (int j=0;j<7;j++){
-            if ((j==4&&i==0)||(j==0&&i==2)||(j==6&&i==4)||(j==2&&i==6)){
-                printf(" ▨ ");
+            if (j==4&&i==0){
+               printf(ANSI_COLOR_GREEN   " ▨ "   ANSI_COLOR_RESET);
+            }
+            else if (j==0&&i==2){
+               printf(ANSI_COLOR_BLUE " ▨ " ANSI_COLOR_RESET);
+            }
+            else if(j==6&&i==4){
+               printf(ANSI_COLOR_MAGENTA " ▨ " ANSI_COLOR_RESET);
+            }
+            else if(j==2&&i==6){
+               printf(ANSI_COLOR_YELLOW  " ▨ "  ANSI_COLOR_RESET);
             }
             else{
                 if((j<1||j>5)||(i<1||i>5)){
