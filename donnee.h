@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
+//define des couleurs pour afficher le tableau
 #define ANSI_COLOR_RED     "\x1b[31m"
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 #define ANSI_COLOR_YELLOW  "\x1b[33m"
@@ -11,12 +11,14 @@
 #define ANSI_COLOR_CYAN    "\x1b[36m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
+//structure pour le scores des joueurs
 typedef struct{
     int space_number;
     int kill_count;
     int treasure_found;
 }Score;
 
+//structure des infos relatifs aux joueurs
 typedef struct{
     char name[100];
     char character; //perso choisi
@@ -28,6 +30,7 @@ typedef struct{
     Score stats;
 }Player;
 
+//structure des cases du donjon et les element qui sont contenus
 typedef struct{
     int hidden; // (1)== cache , (0)== visible
     int monster; // 0 pas de monstre , 1,2,3,4 pour un monstre spécifique
