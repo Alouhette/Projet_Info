@@ -74,7 +74,9 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
             }
         }
     }
-    printf("and the winner is %s" ,tab_j[winner-1].name); // montrer le gagnant 
+    printf("and the winner is %s" ,tab_j[winner-1].name); // montrer le gagnant
+    printf("score final des joueurs");
+    tab_score(tab_j, int nb_j); 
     for(int j=0;j<6;j++){
         for(int h=0;h<6;h++){
             board[h][j].hidden = 0; //afficher le tableau entier
