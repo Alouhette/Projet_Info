@@ -13,9 +13,9 @@
 
 //structure pour le scores des joueurs
 typedef struct{
-    int space_number;
-    int kill_count;
-    int treasure_found;
+    int space_number; //nombre de salle révélé
+    int kill_count; //nombre de monstre tué
+    int treasure_found; //nbr de trésor trouvé (non relique)
 }Score;
 
 //structure des infos relatifs aux joueurs
@@ -25,9 +25,9 @@ typedef struct{
     int weapon; //arme equipe pour ce tour
     int relic; //1 si relique obtenu, 0 sinon
     int treasure; // si 1 tresor obtenu , 0 sinon
-    int indice_x; 
-    int indice_y;
-    Score stats;
+    int indice_x; //position du perso
+    int indice_y; //position du perso
+    Score stats; //score du perso
 }Player;
 
 //structure des cases du donjon et les element qui sont contenus
