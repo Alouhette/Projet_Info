@@ -84,9 +84,6 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
 }
 
 int play_game(){
-    printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
-    printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
-    printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
     int player,winner;
     int character_tab[4]={1,1,1,1};
     player = type_int();
@@ -128,6 +125,9 @@ int main(){
     choice = type_int();
   }
   if(choice == 1){
+    printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
+    printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
+    printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
     //musique
     //to do : musique victoire évent secret : https://www.youtube.com/watch?v=Tt7bzxurJ1I
     play_game();
