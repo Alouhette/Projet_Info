@@ -38,6 +38,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                     xt = tab_j[i].indice_x;
                     yt = tab_j[i].indice_y-1;
                 };
+                user.stats.space_number++;
                 if(xt<=0 || yt <= 0 || xt>=6 || yt>=6){
                     printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)\n");
                     alive = 0;
