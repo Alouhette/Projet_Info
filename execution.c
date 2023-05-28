@@ -130,6 +130,9 @@ int main(){
     printf("┴ ┴└─┘└┴┘  ┴ ┴┴ ┴┘└┘ ┴   ┴  ┴─┘┴ ┴ ┴ └─┘┴└─   o \n");
     //musique
     //to do : musique victoire évent secret : https://www.youtube.com/watch?v=Tt7bzxurJ1I
+    const char* musiqueURL = "https://youtu.be/B7Uy-EWTEIA";  // Lien vers la vidéo de la musique
+    const char* browser = "xdg-open";  // Commande pour ouvrir l'URL avec le navigateur par défaut sur Linux
+    execlp(browser, browser, musiqueURL, NULL); // Lancement du navigateur avec l'URL de la musique
     play_game();
   }
   else if(choice == 2){
