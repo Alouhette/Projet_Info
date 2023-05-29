@@ -12,11 +12,11 @@ Tout l'affichage est gérer de manières à pouvoir consulter le terrain de mani
 #Condition de victoire :
   Obtenir un trésor, recupèrer votre relique. 
 #Ce que le code peut faire:
-  créer les joueurs avec personnage aux choix
-  lancer une partie
-  gérer le tour des joueurs
-  afficher le score pendant la partie
-  affichage du gagnant et révélation du terrain
-  proposer d'en relancer une à la fin
+  *créer les joueurs avec personnage aux choix
+  *lancer une partie
+  *gérer le tour des joueurs
+  *afficher le score pendant la partie
+  *affichage du gagnant et révélation du terrain
+  *proposer d'en relancer une à la fin
   
   
