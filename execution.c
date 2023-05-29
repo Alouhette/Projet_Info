@@ -71,6 +71,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
             for(int j=0;j<6;j++){ //on recache toutes les cases car fin du tour
                 for(int h=0;h<6;h++){
                     board[h][j].hidden = 1;
+                    board[h][j].cleared = 0;
                 }
             }
         }
