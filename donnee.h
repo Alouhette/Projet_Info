@@ -27,7 +27,7 @@ typedef struct{
     int treasure; // si 1 tresor obtenu , 0 sinon
     int indice_x; //position du perso
     int indice_y; //position du perso
-    Score stats; //score du perso
+    //Score stats; //score du perso
 }Player;
 
 //structure des cases du donjon et les element qui sont contenus
