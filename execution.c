@@ -97,9 +97,9 @@ int play_game(){ //initialise la partie
         printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
         player = type_int();
     }
-    Player tab[player]; //tab de joueurs
+    Player tab[player+1]; //tab de joueurs
     int i;
-    for(i=0;i<player+1;i++){
+    for(i=0;i<player;i++){
         tab[i] = create_player(character_tab); //création des perso
     }
     Space board[7][7];
