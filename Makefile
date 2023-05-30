@@ -1,2 +1,2 @@
 build :
-  gcc execution.c -o main
+  gcc execution.c -o  main
