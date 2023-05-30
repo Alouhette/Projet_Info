@@ -99,9 +99,8 @@ int play_game(){ //initialise la partie
     }
     Player tab[player]; //tab de joueurs
     int i;
-    for(i=0;i<player;i++){
+    for(i=0;i<player+1;i++){
         tab[i] = create_player(character_tab); //création des perso
-        printf("debug");
     }
     Space board[7][7];
     create_board(board); //création du terrain
