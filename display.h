@@ -7,7 +7,7 @@ void title(){ //fonction affichant le titre du jeu
   printf("Press 1 to start in normal mode\n");
   printf("Press 2 to exit\n");
 }
-
+/*
 void tab_score(Player * tab, int nb_j){ //Fonction visant à afficher le score penant la partie
   printf("joueurs dans la partie:\n");
   for(int i=0;i<nb_j;i++){
@@ -17,7 +17,7 @@ void tab_score(Player * tab, int nb_j){ //Fonction visant à afficher le score p
       printf("%d trésor trouvé ,",tab[i].stats.treasure_found);
   }
 }
-  
+*/  
 
 void show_symbol(Space x){ //fonction qui vise à afficher les salles spécifique du donjon (quand notamment une case est visible)
   if (x.cleared == 0){
