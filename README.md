@@ -17,10 +17,10 @@ Tout l'affichage est gérer de manières à pouvoir consulter le terrain de mani
   * lancer une partie
   * gérer le tour des joueurs
   * affichage du gagnant et révélation du terrain
-  * proposer d'en relancer une à la fin
+  * proposer d'en relancer une à la fin  
 #Compilation :
   * Par le Makefile : faire make -B (ce qui créera main à partir de éxécution.c) puis éxecuter main.
-  * Compilation directe : Compiler execution.c et éxécuter.
+  * Compilation directe : Compiler execution.c et éxécuter.  
 #Lancement :
   * Une fois l'éxécutable lancer choisir 1 si vous voulez lancer une partie et 2 si vous voulez partir.
 # Soucis_Manque :  
