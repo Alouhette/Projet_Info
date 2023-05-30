@@ -89,7 +89,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
     return winner-1;
 }
 
-int play_game(){ //initialise la partie
+void play_game(){ //initialise la partie
     int player,winner;
     int character_tab[4]={1,1,1,1}; //tab pour les perso dispo
     scanf("%d",&player);
