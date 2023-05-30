@@ -130,9 +130,6 @@ int main(){
     printf("valeur rentré incorrecte veuillez resaisir");
     choice = type_int();
   }
-  const char* musiqueURL = "https://youtu.be/B7Uy-EWTEIA";  // Lien vers la vidéo de la musique
-  const char* browser = "xdg-open";  // Commande pour ouvrir l'URL avec le navigateur par défaut sur Linux
-  execlp(browser, browser, musiqueURL, NULL); // Lancement du navigateur avec l'URL de la musique
   if(choice == 1){
     printf("┬ ┬┌─┐┬ ┬  ┌┬┐┌─┐┌┐┌┬ ┬  ┌─┐┬  ┌─┐┬ ┬┌─┐┬─┐  ┌─┐\n");
     printf("├─┤│ ││││  │││├─┤│││└┬┘  ├─┘│  ├─┤└┬┘├┤ ├┬┘   ┌┘\n");
@@ -143,6 +140,9 @@ int main(){
   }
   else if(choice == 2){
     printf("you decided to leave");
+    const char* musiqueURL = "https://youtu.be/B7Uy-EWTEIA";  // Lien vers la vidéo de la musique
+    const char* browser = "xdg-open";  // Commande pour ouvrir l'URL avec le navigateur par défaut sur Linux
+    execlp(browser, browser, musiqueURL, NULL); // Lancement du navigateur avec l'URL de la musique
   }
   return 0;
 }
