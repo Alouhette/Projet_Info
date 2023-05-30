@@ -40,7 +40,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
                     xt = tab_j[i].indice_x;
                     yt = tab_j[i].indice_y-1;
                 };
-                tab_j[i].stats.space_number++; //le joueurs franchis une case en plus donc on ajoute son score
+                //tab_j[i].stats.space_number++; //le joueurs franchis une case en plus donc on ajoute son score
                 if(xt<=0 || yt <= 0 || xt>=6 || yt>=6){ //si le déplacement le fait sortir du terrain il meurt direct
                     printf("vous vous perdez dans le dédales du labyrinthes (sortie du terrain)\n");
                     alive = 0;
