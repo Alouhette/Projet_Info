@@ -10,7 +10,7 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
     int xt , yt; //pos temporaire des joueurs dans le labyrinthe
     while(winner == 0){
         for(int i=0;i<nb_j;i++){
-            tab_score(tab_j,nb_j); //affichage du score de tout les joueurs
+            //tab_score(tab_j,nb_j); //affichage du score de tout les joueurs
             by = tab_j[i].indice_y;  //on sauvegarde les pos de bases des joueurs
             bx = tab_j[i].indice_x;  //on sauvegarde les pos de bases des joueurs
             show_board(board);
