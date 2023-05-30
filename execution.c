@@ -92,21 +92,17 @@ int game(int nb_j,Player *tab_j,Space board[7][7]){
 void play_game(){ //initialise la partie
     int player,winner;
     int character_tab[4]={1,1,1,1}; //tab pour les perso dispo
-    /*
     scanf("%d",&player);
     while(player < 2 || player > 4){ //verification nombre de joueurs correct
         printf("ERREUR : nombre de joueurs compris entre 2 et 4, veuillez resaisir\n");
         scanf("%d",&player);
     }
+    printf("%d",player);
     Player tab[player]; //tab de joueurs
     int i;
     for(i=0;i<player;i++){
         tab[i] = create_player(character_tab); //création des perso
     }
-    */
-    Player tab[2];
-    tab[0] =  create_player(character_tab); //création des perso
-    tab[1] =  create_player(character_tab); //création des perso
     Space board[7][7];
     create_board(board); //création du terrain
     winner = game(player,tab,board); //modification de winner qui sera renvoyé par game donnant l'indice du joueurs gagnant
