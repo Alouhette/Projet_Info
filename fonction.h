@@ -73,9 +73,9 @@ Player create_player(int *character_available){ //création des perso des joueur
     Player user; //création de la val de retour
     printf("veuillez choisir un nom : ");
     scanf("%s",user.name);
-    user.stats.space_number = 0; //mise en plac des scores
-    user.stats.kill_count = 0;
-    user.stats.treasure_found = 0;
+    //user.stats.space_number = 0; //mise en plac des scores
+    //user.stats.kill_count = 0;
+    //user.stats.treasure_found = 0;
     printf("Veuillez choisir le personnage que vous voulez jouer parmi les suivants :\n");
     show_availability(character_available); //montre les perso dispo
     character_chosen = type_int(); //saisie du perso voulu
@@ -190,7 +190,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
-                user.stats.kill_count++;
+                //user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -202,7 +202,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
-                user.stats.kill_count++;
+                //user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -214,7 +214,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
-                user.stats.kill_count++;
+                //user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -226,7 +226,7 @@ int fight_monster(Player user, Space on_space){ //0 = mort, 1 = en vie
             }
             else{
                 printf("Ayant équipé le bon outil, vous terrassez la créature !\n");
-                user.stats.kill_count++;
+                //user.stats.kill_count++;
                 return 1;
             }
             break;
@@ -328,7 +328,7 @@ int space_effect(Space x, Player user, Space game_board[7][7]){ //retourne 0 si 
     }
     else if (x.treasure==1){
         user.treasure = 1;
-        user.stats.treasure_found++;
+        //user.stats.treasure_found++;
         return 1;
     }
     else if(x.totem==1){
